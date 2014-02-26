@@ -1,0 +1,78 @@
+'.text.tex.latex':
+  'Align(ed)':
+    'prefix': 'ali'
+    'body': '\\begin{align`echo $TM_SCOPE|grep math|\nsed -e \'s/.*math.*/ed/\'`}\n\t$0\n\\end{align`echo $TM_SCOPE|grep math|\nsed -e \'s/.*math.*/ed/\'`}'
+  'Cases':
+    'prefix': 'cas'
+    'body': '\\begin{cases}\n\t${1:equation}, &\\text{ if }${2:case}\\\\\\\\\n\t$0\n\\end{cases}'
+  'Chapter':
+    'prefix': 'cha'
+    'body': '\\chapter{${1:chapter name}} % (fold)\n\\label{cha:${2:${1/\\\\\\\\\\w+\\{(.*?)\\}|\\\\\\\\(.)|(\\w+)|([^\\w\\\\\\\\]+)/(?4:_:\\L$1$2$3)/g}}}\n${0:$TM_SELECTED_TEXT}\n% chapter $2 (end)'
+  'Description':
+    'prefix': 'desc'
+    'body': '\\\\begin{description}\n\t\\item[$1] $0\n\\\\end{description}'
+  'Display Math — \\[ … \\]':
+    'prefix': '$$'
+    'body': '\\[\n\t$TM_SELECTED_TEXT$1\n\\]'
+  'Enumerate':
+    'prefix': 'enum'
+    'body': '\\\\begin{enumerate}\n\t\\item $0\n\\\\end{enumerate}'
+  'Equation':
+    'prefix': 'eq'
+    'body': '\\begin{equation}\n\t$0\n\\end{equation}'
+  'Figure':
+    'prefix': 'figure'
+    'body': '${1:Figure}~\\ref{${2:fig:}}$0'
+  'Gather(ed)':
+    'prefix': 'gat'
+    'body': '\\begin{gather`echo $TM_SCOPE|grep math|\nsed -e \'s/.*math.*/ed/\'`}\n\t$0\n\\end{gather`echo $TM_SCOPE|grep math|\nsed -e \'s/.*math.*/ed/\'`}'
+  'Itemize':
+    'prefix': 'item'
+    'body': '\\\\begin{itemize}\n\t\\item $0\n\\\\end{itemize}'
+  'Listing':
+    'prefix': 'listing'
+    'body': '${1:Listing}~\\ref{${2:lst:}}$0'
+  'Matrix':
+    'prefix': 'mat'
+    'body': '\\begin{${1:p/b/v/V/B/small}matrix}\n\t$0\n\\end{${1:p/b/v/V/B/small}matrix}'
+  'Page':
+    'prefix': 'page'
+    'body': '${1:page}~\\pageref{$2}$0'
+  'Paragraph':
+    'prefix': 'par'
+    'body': '\\paragraph{${1:paragraph name}} % (fold)\n\\label{par:${2:${1/\\\\\\\\\\w+\\{(.*?)\\}|\\\\\\\\(.)|(\\w+)|([^\\w\\\\\\\\]+)/(?4:_:\\L$1$2$3)/g}}}\n${0:$TM_SELECTED_TEXT}\n% paragraph $2 (end)'
+  'Part':
+    'prefix': 'part'
+    'body': '\\part{${1:part name}} % (fold)\n\\label{prt:${2:${1/(\\w+)|\\W+/(?1:\\L$0:_)/g}}}\n${0:$TM_SELECTED_TEXT}\n% part $2 (end)'
+  'Section':
+    'prefix': 'sec'
+    'body': '\\section{${1:section name}} % (fold)\n\\label{sec:${2:${1/\\\\\\\\\\w+\\{(.*?)\\}|\\\\\\\\(.)|(\\w+)|([^\\w\\\\\\\\]+)/(?4:_:\\L$1$2$3)/g}}}\n${0:$TM_SELECTED_TEXT}\n% section $2 (end)'
+  'Split':
+    'prefix': 'spl'
+    'body': '\\begin{split}\n\t$0\n\\end{split}'
+  'Sub Paragraph':
+    'prefix': 'subp'
+    'body': '\\subparagraph{${1:subparagraph name}} % (fold)\n\\label{subp:${2:${1/\\\\\\\\\\w+\\{(.*?)\\}|\\\\\\\\(.)|(\\w+)|([^\\w\\\\\\\\]+)/(?4:_:\\L$1$2$3)/g}}}\n${0:$TM_SELECTED_TEXT}\n% subparagraph $2 (end)'
+  'Table':
+    'prefix': 'table'
+    'body': '${1:Table}~\\ref{${2:tab:}}$0'
+  'Tabular':
+    'prefix': 'tab'
+    'body': '\\\\begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}\n$0${2/((?<=[clr])([ |]*(c|l|r)))|./(?1: & )/g}\n\\\\end{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}'
+  '\\begin{}…\\end{}':
+    'prefix': 'begin'
+    'body': '\\\\begin{${1:env}}\n\t${1/(enumerate|itemize|list)|(description)|.*/(?1:\\item )(?2:\\item)/}$0\n\\\\end{${1:env}}'
+  'Sub Section':
+    'prefix': 'sub'
+    'body': '\\subsection{${1:subsection name}} % (fold)\n\\label{sub:${2:${1/\\\\\\\\\\w+\\{(.*?)\\}|\\\\\\\\(.)|(\\w+)|([^\\w\\\\\\\\]+)/(?4:_:\\L$1$2$3)/g}}}\n${0:$TM_SELECTED_TEXT}\n% subsection $2 (end)'
+  'Sub Sub Section':
+    'prefix': 'subs'
+    'body': '\\subsubsection{${1:subsubsection name}} % (fold)\n\\label{ssub:${2:${1/\\\\\\\\\\w+\\{(.*?)\\}|\\\\\\\\(.)|(\\w+)|([^\\w\\\\\\\\]+)/(?4:_:\\L$1$2$3)/g}}}\n${0:$TM_SELECTED_TEXT}\n% subsubsection $2 (end)'
+'.text.tex.latex.beamer':
+  'Frame':
+    'prefix': 'frame'
+    'body': '\\begin{frame}[t]{${1:title}}\n\t${0:$TM_SELECTED_TEXT}\n\\end{frame}\n%--- Next Frame ---%'
+'.text.tex.latex .meta.function.environment.list':
+  '\\item[description]':
+    'prefix': 'itd'
+    'body': '\\\\item[${1:description}] ${0:item}'
