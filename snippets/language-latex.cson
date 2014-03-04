@@ -1,13 +1,20 @@
 '.text.tex.latex':
+# Corrected - $1 tab $2 tab $3 ...
+'Figure':
+  'prefix': 'figure'
+  'body': 'Figure~\\ref{$1}~$2'
+
+  'Chapter':
+    'prefix': 'cha'
+    'body': '\\chapter{${1:chapter name}}\\label{chap:${2:chapter label}}\n${3:body}'
+
+# Un-reviewed
   'Align(ed)':
     'prefix': 'ali'
     'body': '\\begin{align`echo $TM_SCOPE|grep math|\nsed -e \'s/.*math.*/ed/\'`}\n\t$0\n\\end{align`echo $TM_SCOPE|grep math|\nsed -e \'s/.*math.*/ed/\'`}'
   'Cases':
     'prefix': 'cas'
     'body': '\\begin{cases}\n\t${1:equation}, &\\text{ if }${2:case}\\\\\\\\\n\t$0\n\\end{cases}'
-  'Chapter':
-    'prefix': 'cha'
-    'body': '\\chapter{${1:chapter name}} % (fold)\n\\label{cha:${2:${1/\\\\\\\\\\w+\\{(.*?)\\}|\\\\\\\\(.)|(\\w+)|([^\\w\\\\\\\\]+)/(?4:_:\\L$1$2$3)/g}}}\n${0:$TM_SELECTED_TEXT}\n% chapter $2 (end)'
   'Description':
     'prefix': 'desc'
     'body': '\\\\begin{description}\n\t\\item[$1] $0\n\\\\end{description}'
@@ -20,9 +27,6 @@
   'Equation':
     'prefix': 'eq'
     'body': '\\begin{equation}\n\t$0\n\\end{equation}'
-  'Figure':
-    'prefix': 'figure'
-    'body': '${1:Figure}~\\ref{${2:fig:}}$0'
   'Gather(ed)':
     'prefix': 'gat'
     'body': '\\begin{gather`echo $TM_SCOPE|grep math|\nsed -e \'s/.*math.*/ed/\'`}\n\t$0\n\\end{gather`echo $TM_SCOPE|grep math|\nsed -e \'s/.*math.*/ed/\'`}'
