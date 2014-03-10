@@ -299,12 +299,12 @@
     'patterns': [
       {
         'match': '\\\\\\\\'
-        'name': 'punctuation.definition.table.row.latex'
+        'name': 'punctuation.definition.table.row2.latex'
       }
       {
         'begin': '(?:^|(?<=\\\\\\\\))(?!\\\\\\\\|\\s*\\\\end\\{(?:tabular|array))'
         'end': '(?=\\\\\\\\|\\s*\\\\end\\{(?:tabular|array))'
-        'name': 'meta.row.environment.tabular.latex'
+        'name': 'meta.row2.environment.tabular.latex'
         'patterns': [
           {
             'match': '&'
