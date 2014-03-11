@@ -1,6 +1,7 @@
 '.text.tex':
   'editor':
     'foldEndPattern': '\\*\\*/|^\\s*\\}'
+    'commentStart': '% '
 '.text.bibtex':
   'editor':
     'foldEndPattern': '^\\s*[)}]\\s*$'
