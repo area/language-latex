@@ -65,6 +65,321 @@
     'prefix': '$$'
     'body': '\\[\n\t$1\n\\]'
 
+# Math, taken from  https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX%20math.sublime-completions
+  'alpha':
+    'prefix': 'a'
+    'body': '\\alpha'
+  'beta':
+    'prefix': 'b'
+    'body': '\\beta'
+  'gamma':
+    'prefix': 'g'
+    'body': '\\gamma'
+  'delta':
+    'prefix': 'd'
+    'body': '\\delta'
+  'partial':
+    'prefix': 'delta'
+    'body': 'partial'
+  'epsilon':
+    'prefix': 'e'
+    'body': '\\epsilon'
+  'varepsilon':
+    'prefix': 'epsilon'
+    'body': 'varepsilon'
+  'epsilon':
+    'prefix': 'varepsilon'
+    'body': 'epsilon'
+  'zeta':
+    'prefix': 'z'
+    'body': '\\zeta'
+  'eta':
+    'prefix': 'h'
+    'body': '\\eta'
+  'theta':
+    'prefix': 'q'
+    'body': '\\theta'
+  'vartheta':
+    'prefix': '\\theta'
+    'body': '\\vartheta'
+  'theta':
+    'prefix': '\\vartheta'
+    'body': '\\theta'
+  'iota':
+    'prefix': 'i'
+    'body': '\\iota'
+  'kappa':
+    'prefix': 'k'
+    'body': '\\kappa'
+  'lambda':
+    'prefix': 'l'
+    'body': '\\lambda'
+  'mu':
+    'prefix': 'm'
+    'body': '\\mu'
+  'nu':
+    'prefix': 'n'
+    'body': '\\nu'
+  'xi':
+    'prefix': 'x'
+    'body': '\\xi'
+  'pi':
+    'prefix': 'p'
+    'body': '\\pi'
+  'rho':
+    'prefix': 'r'
+    'body': '\\rho'
+  'sigma':
+    'prefix': 's'
+    'body': '\\sigma'
+  'tau':
+    'prefix': 't'
+    'body': '\\tau'
+  'upsilon':
+    'prefix': 'u'
+    'body': '\\upsilon'
+  'phi':
+    'prefix': 'f'
+    'body': '\\phi'
+  'varphi':
+    'prefix': '\\phi'
+    'body': '\\varphi'
+  'phi':
+    'prefix': '\\varphi'
+    'body': '\\phi'
+  'chi':
+    'prefix': 'c'
+    'body': '\\chi'
+  'psi':
+    'prefix': 'y'
+    'body': '\\psi'
+  'omega':
+    'prefix': 'w'
+    'body': '\\omega'
+  'digamma':
+    'prefix': 'v'
+    'body': '\\digamma'
+  'Gamma':
+    'prefix': 'G'
+    'body': '\\Gamma'
+  'Delta':
+    'prefix': 'D'
+    'body': '\\Delta'
+  'Theta':
+    'prefix': 'Q'
+    'body': '\\Theta'
+  'Lambda':
+    'prefix': 'L'
+    'body': '\\Lambda'
+  'Xi':
+    'prefix': 'X'
+    'body': '\\Xi'
+  'Pi':
+    'prefix': 'P'
+    'body': '\\Pi'
+  'Sigma':
+    'prefix': 'S'
+    'body': '\\Sigma'
+  'Phi':
+    'prefix': 'F'
+    'body': '\\Phi'
+  'Psi':
+    'prefix': 'Y'
+    'body': '\\Psi'
+  'Omega':
+    'prefix': 'W'
+    'body': '\\Omega'
+  'emptyset':
+    'prefix': '0'
+    'body': '\\emptyset'
+  'forall':
+    'prefix': 'V'
+    'body': '\\forall'
+  'exists':
+    'prefix': 'E'
+    'body': '\\exists'
+  'setminus':
+    'prefix': 'sm'
+    'body': '\\setminus'
+  'ldots':
+    'prefix': 'ld'
+    'body': '\\ldots'
+  'cdot':
+    'prefix': 'cd'
+    'body': '\\cdot'
+  'cdots':
+    'prefix': 'cdot'
+    'body': 'cdots'
+  'cdot':
+    'prefix': 'cdots'
+    'body': 'cdot'
+  'langle':
+    'prefix': 'la'
+    'body': '\\langle'
+  'rangle':
+    'prefix': 'ra'
+    'body': '\\rangle'
+  'cup':
+    'prefix': 'cu'
+    'body': '\\cup'
+  'cap':
+    'prefix': 'ca'
+    'body': '\\cap'
+  'bigcup':
+    'prefix': 'bcu'
+    'body': '\\bigcup'
+  'bigcap':
+    'prefix': 'bca'
+    'body': '\\bigcap'
+  'int':
+    'prefix': 'in'
+    'body': '\\int'
+  'infty':
+    'prefix': 'int'
+    'body': 'infty'
+  'int':
+    'prefix': 'infty'
+    'body': 'int'
+  'sum':
+    'prefix': 'su'
+    'body': '\\sum'
+  'sup':
+    'prefix': 'sum'
+    'body': 'sup'
+  'succ':
+    'prefix': 'sup'
+    'body': 'succ'
+  'succeq':
+    'prefix': 'succ'
+    'body': 'succeq'
+  'succcurlyeq':
+    'prefix': 'succeq'
+    'body': 'succcurlyeq'
+  'sum':
+    'prefix': 'succcurlyeq'
+    'body': 'sum'
+  'quad':
+    'prefix': 'qd'
+    'body': '\\quad'
+  'qquad':
+    'prefix': 'qqd'
+    'body': '\\qquad'
+  'prod':
+    'prefix': 'pr'
+    'body': '\\prod'
+  'prec':
+    'prefix': 'prod'
+    'body': 'prec'
+  'preceq':
+    'prefix': 'prec'
+    'body': 'preceq'
+  'preccurlyeq':
+    'prefix': 'preceq'
+    'body': 'preccurlyeq'
+  'prod':
+    'prefix': 'preccurlyeq'
+    'body': 'prod'
+  'leftarrow':
+    'prefix': 'lar'
+    'body': '\\leftarrow'
+  'longleftarrow':
+    'prefix': 'leftarrow'
+    'body': 'longleftarrow'
+  'leftarrow':
+    'prefix': 'longleftarrow'
+    'body': 'leftarrow'
+  'Leftarrow':
+    'prefix': 'Lar'
+    'body': '\\Leftarrow'
+  'Longleftarrow':
+    'prefix': 'Leftarrow'
+    'body': 'Longleftarrow'
+  'Leftarrow':
+    'prefix': 'Longleftarrow'
+    'body': 'Leftarrow'
+  'rightarrow':
+    'prefix': 'rar'
+    'body': '\\rightarrow'
+  'longrightarrow':
+    'prefix': 'rightarrow'
+    'body': 'longrightarrow'
+  'rightarrow':
+    'prefix': 'longrightarrow'
+    'body': 'rightarrow'
+  'Rightarrow':
+    'prefix': 'Rar'
+    'body': '\\Rightarrow'
+  'Longrightarrow':
+    'prefix': 'Rightarrow'
+    'body': 'Longrightarrow'
+  'Rightarrow':
+    'prefix': 'Longrightarrow'
+    'body': 'Rightarrow'
+  'leftrightarrow':
+    'prefix': 'lr'
+    'body': '\\leftrightarrow'
+  'Leftrightarrow':
+    'prefix': 'Lr'
+    'body': '\\Leftrightarrow'
+  'Leftrightarrow':
+    'prefix': 'iff'
+    'body': '\\Leftrightarrow'
+  'Longleftrightarrow':
+    'prefix': 'Leftrightarrow'
+    'body': 'Longleftrightarrow'
+  'Leftrightarrow':
+    'prefix': 'Longleftrightarrow'
+    'body': 'Leftrightarrow'
+  'uparrow':
+    'prefix': 'up'
+    'body': '\\uparrow'
+  'downarrow':
+    'prefix': 'do'
+    'body': '\\downarrow'
+  'mathit':
+    'prefix': 'it'
+    'body': '\\mathit{$1}$0'
+  'mathbf':
+    'prefix': 'bf'
+    'body': '\\mathbf{$1}$0'
+  'mathbb':
+    'prefix': 'bb'
+    'body': '\\mathbb{$1}$0'
+  'mathrm':
+    'prefix': 'rm'
+    'body': '\\mathrm{$1}$0'
+  'mathsf':
+    'prefix': 'sf'
+    'body': '\\mathsf{$1}$0'
+  'mathcal':
+    'prefix': 'cal'
+    'body': '\\mathcal'
+  'mathcal':
+    'prefix': 'mathcal'
+    'body': 'mathcal{$1}$0'
+  'left( right)':
+    'prefix': 'lp'
+    'body': '\\left( $1 \\right) $0'
+  'left[ right]':
+    'prefix': 'lb'
+    'body': '\\left[ $1 \\right] $0'
+  'left{ right}':
+    'prefix': 'lbr'
+    'body': '\\left\\\\{ $0 \\right\\\\}'
+  'frac':
+    'prefix': 'fr'
+    'body': '\\frac'
+  'frac{}{}':
+    'prefix': 'fra'
+    'body': '\\frac{$1}{$2}$0'
+  'stackrel{}{}':
+    'prefix': 'stack'
+    'body': '\\stackrel{$1}{$2}$0'
+  'split env':
+    'prefix': 'sp'
+    'body': '\\begin{split}\n$0\n\\end{split}\n'
+
+
 # Other
 '.text.tex.latex.beamer':
   'Frame':
