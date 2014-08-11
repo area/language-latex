@@ -385,11 +385,17 @@
     'body': '\\begin{split}\n$0\n\\end{split}\n'
 
 
-# Other
+# Beamer
 '.text.tex.latex.beamer':
   'Frame':
     'prefix': 'frame'
     'body': '\\begin{frame}[t]{${1:title}}\n\t${2:body}\n\\end{frame}\n%--- Next Frame ---%'
+  'Columns':
+    'prefix': 'cols'
+    'body': '\\begin{columns}\n\\begin{column}[T]{$1cm}\n$3\n\\end{column}\n\\hfill\n\\begin{column}[T]{$2cm}\n\n\\end{column}\n\\end{columns}\n'
+
+
+# Other
 '.text.tex.latex .meta.function.environment.list':
   '\\item[description]':
     'prefix': 'itd'
