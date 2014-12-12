@@ -196,6 +196,36 @@
     ]
   }
   {
+    'begin': '(?:\\s*)((\\\\)begin)(\\{)(luacode(?:\\*?))(\\})(?:\\s*%.*\\n?)?'
+    'captures':
+      '1':
+        'name': 'support.function.be.latex'
+      '2':
+        'name': 'punctuation.definition.function.latex'
+      '3':
+        'name': 'punctuation.definition.arguments.begin.latex'
+      '4':
+        'name': 'variable.parameter.function.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.end.latex'
+    'comment': 'it should treat difference between luacode* and luacode better'
+    'contentName': 'meta.function.embedded.latex'
+    'end': '((\\\\)end)(\\{)(luacode(?:\\*?))(\\})'
+    'name': 'meta.embedded.block.lua'
+    'patterns': [
+      {
+        'begin': '^(?!\\\\end\\{luacode(?:\\*?)\\})'
+        'end': '(?=\\\\end\\{luacode(?:\\*?)\\})'
+        'name': 'source.lua'
+        'patterns': [
+          {
+            'include': 'source.lua'
+          }
+        ]
+      }
+    ]
+  }
+  {
     'begin': '(?:\\s*)((\\\\)begin)(\\{)((?:V|v)erbatim|alltt)(\\})'
     'captures':
       '1':
