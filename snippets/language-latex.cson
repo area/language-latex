@@ -62,8 +62,11 @@
     'prefix': 'table'
     'body': '${1:Table}~\\\\ref{${2:tab:}}$0'
   'Display Math — \\\\[ … \\\\]':
-    'prefix': '$$'
+    'prefix': 'display'
     'body': '\\\\[\n\t$1\n\\\\]'
+  'Math Mode - $ … $':
+    'prefix': 'math'
+    'body': '$$'
 
 # Others
   '\\\\begin{}…\\\\end{}':
