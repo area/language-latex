@@ -169,7 +169,7 @@
         ]
       }
       {
-        'begin': '((\\\\)begin)(\\{)(lstlisting)(\\})(?:(\\[).*(\\]))?(\\s*%.*\\n?)?'
+        'begin': '(((\\\\)begin)(\\{)(lstlisting)(\\})(?:(\\[).*(\\]))?(\\s*%.*\\n?)?)'
         'captures':
           '1':
             'name': 'meta.function.embedded.latex'
