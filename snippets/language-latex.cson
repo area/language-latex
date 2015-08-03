@@ -68,7 +68,13 @@
 # Others
   '\\\\begin{}…\\\\end{}':
     'prefix': 'begin'
-    'body': '\\\\begin{${1:env}}\n\t$2\n\\\\end{${1:env}}'
+    'body': '\\begin{${1:env}}\n\t$2\n\\end{${1:env}}'
+  'Figure float':
+    'prefix': 'ffig'
+    'body': '\\begin{figure}[htbp]\n\t\\includegraphics{$1}\n\t\\caption{$2}\n\t\\label{fig:$3}\n\\end{figure}'
+  'Table float':
+    'prefix': 'ftable'
+    'body': '\\begin{table}\n\t\\begin{tabular}{$1}\n\t\t$2\n\t\\end{tabular}\\caption{$3}\n\t\\label{table:$4}\n\\end{table}'
 
 # Math, taken from  https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX%20math.sublime-completions
   'alpha':
