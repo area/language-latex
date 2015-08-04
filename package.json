@@ -6,7 +6,10 @@
   "repository": "https://github.com/area/language-latex",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+  "atom": ">0.50.0"
   },
   "dependencies": {}
 }
+"keywords": [
+    "latex",
+  ],
