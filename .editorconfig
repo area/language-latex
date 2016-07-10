@@ -1,0 +1,5 @@
+root = false
+
+[*.{json,cson}]
+indent_style = space
+indent_size = 2
