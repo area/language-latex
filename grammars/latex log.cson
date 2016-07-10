@@ -1,4 +1,4 @@
-'firstLineMatch': 'This is (pdf|pdfe)?TeXk?, Version '
+'firstLineMatch': 'This is (e-p|e-up|Lua|pdf|Xe)?TeXk?, Version '
 'name': 'LaTeX Log'
 'patterns': [
   {
