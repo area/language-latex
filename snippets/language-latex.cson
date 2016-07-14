@@ -65,22 +65,22 @@
     'body': '$$1$$0'
 
 # math, taken from  https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX%20math.sublime-completions
-  'mathit':
+  'math italic':
     'prefix': 'it'
     'body': '\\\\mathit{$1}$0'
-  'mathbf':
+  'math boldface':
     'prefix': 'bf'
     'body': '\\\\mathbf{$1}$0'
-  'mathbb':
+  'math blackboard':
     'prefix': 'bb'
     'body': '\\\\mathbb{$1}$0'
-  'mathrm':
+  'math roman':
     'prefix': 'rm'
     'body': '\\\\mathrm{$1}$0'
-  'mathsf':
+  'math sans-serif':
     'prefix': 'sf'
     'body': '\\\\mathsf{$1}$0'
-  'mathcal':
+  'math calligraphy':
     'prefix': 'cal'
     'body': '\\\\mathcal{$1}$0'
   'fraction':
