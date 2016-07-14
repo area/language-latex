@@ -2,67 +2,67 @@
 # preamble and package/class file
   "RequirePackage":
     "prefix": "Pkg"
-    "body": "\\\\RequirePackage$2{${1:package name}}"
+    "body": "\\\\RequirePackage$2{${1:package name}}$0"
   "usepackage":
     "prefix": "pkg"
-    "body": "\\\\usepackage$2{${1:package name}}"
+    "body": "\\\\usepackage$2{${1:package name}}$0"
 
 # document level
   'part':
     'prefix': 'part'
-    'body': '\\\\part{${1:part name}}\n$2'
+    'body': '\\\\part{${1:part name}}\n$0'
   'chapter':
     'prefix': 'chapter'
-    'body': '\\\\chapter{${1:chapter name}}\n$2'
+    'body': '\\\\chapter{${1:chapter name}}\n$0'
   'section':
     'prefix': 'section'
-    'body': '\\\\section{${1:section name}}\n$2'
+    'body': '\\\\section{${1:section name}}\n$0'
   'subsection':
     'prefix': 'subsection'
-    'body': '\\\\subsection{${1:subsection name}}\n$2'
+    'body': '\\\\subsection{${1:subsection name}}\n$0'
   'subsubsection':
     'prefix': 'subsubsection'
-    'body': '\\\\subsubsection{${1:subsubsection name}}\n$2'
+    'body': '\\\\subsubsection{${1:subsubsection name}}\n$0'
   'paragraph':
     'prefix': 'paragraph'
-    'body': '\\\\paragraph{${1:paragraph name}}\n$2'
+    'body': '\\\\paragraph{${1:paragraph name}}\n$0'
   'subparagraph':
     'prefix': 'subparagraph'
-    'body': '\\\\subparagraph{${1:subparagraph name}}\n$2'
+    'body': '\\\\subparagraph{${1:subparagraph name}}\n$0'
 
 # environement
   '\\begin{}...\\end{}':
     'prefix': 'begin'
-    'body': '\\\\begin{${1:env}}\n\t$2\n\\\\end{${1:env}}'
+    'body': '\\\\begin{${1:env}}\n\t$0\n\\\\end{${1:env}}'
   'align(*)':
     'prefix': 'align'
-    'body': '\\\\begin{align$1}\n\t$2\n\\\\end{align$1}'
+    'body': '\\\\begin{align$1}\n\t$0\n\\\\end{align$1}'
   'aligned':
     'prefix': 'aligned'
-    'body': '\\\\begin{aligned}[$1]\n\t$2\n\\\\end{aligned}'
+    'body': '\\\\begin{aligned}[$1]\n\t$0\n\\\\end{aligned}'
   'description':
     'prefix': 'description'
-    'body': '\\\\begin{description}\n\t\\\\item[$1]$2\n\\\\end{description}'
+    'body': '\\\\begin{description}\n\t\\\\item[$1]$0\n\\\\end{description}'
   'enumerate':
     'prefix': 'enumerate'
-    'body': '\\\\begin{enumerate}\n\t\\\\item $1\n\\\\end{enumerate}'
+    'body': '\\\\begin{enumerate}\n\t\\\\item $0\n\\\\end{enumerate}'
   'equation(*)':
     'prefix': 'equation'
-    'body': '\\\\begin{equation$1}\n\t$2\n\\\\end{equation$1}'
+    'body': '\\\\begin{equation$1}\n\t$0\n\\\\end{equation$1}'
   'gather(*)':
       'prefix': 'gather'
-      'body': '\\\\begin{gather$1}\n\t$2\n\\\\end{gather$1}'
+      'body': '\\\\begin{gather$1}\n\t$0\n\\\\end{gather$1}'
   'gathered':
       'prefix': 'gathered'
-      'body': '\\\\begin{gathered}[$1]\n\t$2\n\\\\end{gathered}'
+      'body': '\\\\begin{gathered}[$1]\n\t$0\n\\\\end{gathered}'
   'itemize':
     'prefix': 'itemize'
-    'body': '\\\\begin{itemize}\n\t\\\\item $1\n\\\\end{itemize}'
+    'body': '\\\\begin{itemize}\n\t\\\\item $0\n\\\\end{itemize}'
 
 # element
   'inline math - $$':
     'prefix': 'inline'
-    'body': '$$1$'
+    'body': '$$1$$0'
 
 # math, taken from  https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX%20math.sublime-completions
   'mathit':
