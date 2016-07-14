@@ -430,7 +430,7 @@
     'captures':
       '1':
         'name': 'punctuation.definition.function.latex'
-    'match': '(\\\\)(newcommand|renewcommand)\\b'
+    'match': '(\\\\)((re)?new|provide)command\\b'
     'name': 'storage.type.function.latex'
   }
   {
