@@ -82,10 +82,7 @@
     'body': '\\\\mathsf{$1}$0'
   'mathcal':
     'prefix': 'cal'
-    'body': '\\\\mathcal'
-  'mathcal':
-    'prefix': 'mathcal'
-    'body': 'mathcal{$1}$0'
+    'body': '\\\\mathcal{$1}$0'
   'fraction':
     'prefix': 'frac'
     'body': '\\\\frac{$1}{$2}$0'
