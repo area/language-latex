@@ -1,25 +1,37 @@
-# Language-LaTeX package
+`language-tex` package
+---
+An Atom package that provides syntax highlight and snippets for TeX and its related stuff.
 
-Syntax highlighting and Snippets for LaTeX in atom. This package was derived from the [LaTeX TextMate bundle](https://github.com/textmate/latex.tmbundle).
+![sample of language-tex package](./_img/preview.png "sample of language-tex package")
 
-![Screenshot](https://cloud.githubusercontent.com/assets/6838481/9054418/611c6728-3a81-11e5-826b-069b72fffa48.png)
+### Overview
+The `language-tex` package provides your Atom with syntax highlight and code snippets for TeX, LaTeX, BibTeX and so on.
+This package is a forked project of [`language-latex`](https://github.com/area/language-latex) package to fix derelict bugs and add new features.
 
-------------------------  
 
-## Install
-#### To install via gui:
-In atom go to Settings/Preferences ➔ Packages ➔ Search for `language-latex`
+### Install
+This package has not been released via `apm` yet.
+I am sorry to inconvenience you, but please clone the repository to install the package.
 
-#### To install via command line:
 ```bash
-apm install language-latex
+cd ~/.atom/packages
+git clone git@github.com:yudai-nkt/language-tex.git
 ```
 
-## Project's Activity
-[![Throughput Graph](https://graphs.waffle.io/area/language-latex/throughput.svg)](https://waffle.io/area/language-latex/metrics)
+If you do not want to install manually-cloned packages in `~/.atom/packages`, you can try
 
-## Contributing
-Please update the [CHANGELOG.md](https://github.com/area/language-latex/blob/master/CHANGELOG.md) and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests) when contributing.
+```bash
+export LANG_TEX_ROOT=/path/to/language-tex
+git clone git@github.com:yudai-nkt/language-tex.git $LANG_TEX_ROOT
+apm link $LANG_TEX_ROOT
+```
 
-## License
-Language-LaTeX is released under the [MIT](https://github.com/area/language-latex/blob/master/LICENSE.md) license.
+### Contribution
+Contributions are highly welcome. Feel free to report an [issue](https://github.com/yudai-nkt/language-tex/issues) or create a [pull request](https://github.com/yudai-nkt/language-tex/pulls).
+
+### License
+This package is distributed under the MIT License.
+See [LICENSE.md](./LICENSE.md) for details.
+
+---
+Copyright (c) 2016 Yudai NAKATA
