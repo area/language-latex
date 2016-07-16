@@ -14,6 +14,7 @@ Changelog
 #### Fixed
 - Matching for `\iftrue`
 - Matching for `\providecommand`
+- Escaped dollar sign in `minted` environment
 
 ### v0.0.0
 This version is identical with the area's `language-latex` package as of August 2015 except for the following change:
