@@ -85,6 +85,31 @@
     ]
   }
   {
+    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?\{.*\}(\\s*%.*\\n?)?)'
+    'captures':
+      '1':
+        'name': 'meta.function.embedded.latex'
+      '2':
+        'name': 'support.function.be.latex'
+      '3':
+        'name': 'punctuation.definition.function.latex'
+      '4':
+        'name': 'punctuation.definition.arguments.begin.latex'
+      '5':
+        'name': 'variable.parameter.function.latex'
+      '6':
+        'name': 'punctuation.definition.arguments.end.latex'
+      '7':
+        'name': 'punctuation.definition.arguments.optional.begin.latex'
+      '8':
+        'name': 'punctuation.definition.arguments.optional.end.latex'
+      '9':
+        'name': 'comment.line.percentage.latex'
+    'contentName': 'meta.function.embedded.latex'
+    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'name': 'meta.embedded.block.generic'
+  }
+  {
     'begin': '(^\\s*)?(?=\\\\begin\\{lstlisting\\})'
     'beginCaptures':
       '0':
