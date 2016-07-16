@@ -16,6 +16,7 @@ All notable changes to the project will be documented in this file.
 - Matching for `\iftrue`
 - Matching for `\providecommand`
 - Escaped dollar sign in `minted` environment
+- Incorrect naming of `\label`'s argument ([#1](https://github.com/yudai-nkt/language-tex/pull/1))
 
 ### [v0.0.0](https://github.com/yudai-nkt/language-tex/releases/tag/v0.0.0)
 This version is identical with the area's `language-latex` package as of August 2015 except for the following change:
