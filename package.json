@@ -2,7 +2,7 @@
   "name": "language-tex",
   "version": "0.0.0",
   "author": "Yudai Nakata",
-  "description": "Atom syntax highlight for TeX and its related stuff",
+  "description": "Atom syntax highlight and snippets for TeX and its related stuff",
   "keywords": [
     "tex",
     "plain-tex",
