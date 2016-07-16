@@ -1,5 +1,6 @@
 Changelog
 ---
+All notable changes to the project will be documented in this file.
 
 ### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.0.0...master)
 #### Added
