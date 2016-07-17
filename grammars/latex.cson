@@ -91,11 +91,14 @@
         'name': 'support.function.ExplSyntax.tex'
     'patterns':[
       {
-        'match': '(\\\\)[A-Za-z@_]+(:[nNpTFDwcVvxof]+)?'
+        'match': '(\\\\)[A-Za-z@_]+_[A-Za-z@_]+(:[nNpTFDwcVvxof]+)?'
         'name': 'support.function.expl3.tex'
       }
+      {
+        'include': '$self'
+      }
     ]
-    'end': '\\\\ExplSyntaxOff'
+    'end': '(\\\\ExplSyntaxOff|\Z)'
     'endCaptures':
       '0':
         'name': 'support.function.ExplSyntax.tex'
