@@ -675,7 +675,7 @@
     'begin': '((\\\\)label)(\\{)'
     'beginCaptures':
       '1':
-        'name': 'keyword.control.latex'
+        'name': 'keyword.control.label.latex'
       '2':
         'name': 'punctuation.definition.keyword.latex'
       '3':
@@ -688,7 +688,7 @@
     'patterns': [
       {
         'match': '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
-        'name': 'variable.parameter.definition.latex'
+        'name': 'constant.other.reference.latex'
       }
     ]
   }
