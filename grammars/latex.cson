@@ -85,6 +85,25 @@
     ]
   }
   {
+    'begin': '(\\\\ExplSyntaxOn|\\\\ProvidesExplPackage)'
+    'beginCaptures':
+      '0':
+        'name': 'support.function.ExplSyntax.tex'
+    'patterns':[
+      {
+        'match': '(\\\\)[A-Za-z@_]+_[A-Za-z@_]+(:[nNpTFDwcVvxof]+)?'
+        'name': 'support.function.expl3.tex'
+      }
+      {
+        'include': '$self'
+      }
+    ]
+    'end': '(\\\\ExplSyntaxOff|\Z)'
+    'endCaptures':
+      '0':
+        'name': 'support.function.ExplSyntax.tex'
+  }
+  {
     'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?\{.*\}(\\s*%.*\\n?)?)'
     'captures':
       '1':
