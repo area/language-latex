@@ -10,19 +10,13 @@ This package is a forked project of [`language-latex`](https://github.com/area/l
 
 
 ### Install
-This package has not been released yet and must be installed from the Git repository.
+Just run the following command:
 
 ```bash
-apm install yudai-nkt/language-tex
+apm install language-tex
 ```
 
-If you do not want to install Git packages in `~/.atom/packages`, you can try
-
-```bash
-export LANG_TEX_ROOT=/path/to/language-tex
-git clone git@github.com:yudai-nkt/language-tex.git $LANG_TEX_ROOT
-apm link $LANG_TEX_ROOT
-```
+If you prefer intallation via GUI, you can go to `Atom` > `Settings` > `Install`, search for `language-tex` in Packages tab and install it.
 
 ### Contribution
 Contributions are highly welcome. Feel free to report an [issue](https://github.com/yudai-nkt/language-tex/issues) or create a [pull request](https://github.com/yudai-nkt/language-tex/pulls).
