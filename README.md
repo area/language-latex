@@ -10,15 +10,13 @@ This package is a forked project of [`language-latex`](https://github.com/area/l
 
 
 ### Install
-This package has not been released via `apm` yet.
-I am sorry to inconvenience you, but please clone the repository to install the package.
+This package has not been released yet and must be installed from the Git repository.
 
 ```bash
-cd ~/.atom/packages
-git clone git@github.com:yudai-nkt/language-tex.git
+apm install yudai-nkt/language-tex
 ```
 
-If you do not want to install manually-cloned packages in `~/.atom/packages`, you can try
+If you do not want to install Git packages in `~/.atom/packages`, you can try
 
 ```bash
 export LANG_TEX_ROOT=/path/to/language-tex
