@@ -1,11 +1,11 @@
 `language-tex` package
 ---
-An Atom package that provides syntax highlight and snippets for TeX and its related stuff.
+An Atom package that provides grammar and snippets of TeX and its related stuff.
 
 ![sample of language-tex package](./_img/preview.png "sample of language-tex package")
 
 ### Overview
-The `language-tex` package provides your Atom with syntax highlight and code snippets for TeX, LaTeX, BibTeX and so on.
+The `language-tex` package provides your Atom with grammar and code snippets of TeX, LaTeX, BibTeX and so on.
 This package is a forked project of [`language-latex`](https://github.com/area/language-latex) package to fix derelict bugs and add new features.
 
 
