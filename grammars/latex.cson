@@ -475,8 +475,12 @@
     'captures':
       '1':
         'name': 'punctuation.definition.function.latex'
-    'match': '(\\\\)(((re)?new|provide)command|Declare[A-Z][a-zA-Z]*)\\b'
+    'match': '(\\\\)((re)?new|provide)command\\b'
     'name': 'storage.type.function.latex'
+  }
+  {
+    'match': '\\\\Declare(?!OptionX?\\b)([A-Z][a-zA-Z]*)\\b'
+    'name': 'support.type.function.other.latex'
   }
   {
     'match': '\\\\(Declare(Expandable)?|New|Renew|Provide)DocumentCommand\\b'
