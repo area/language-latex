@@ -2,7 +2,7 @@
 ---
 An Atom package that provides grammar and snippets of TeX and its related stuff.
 
-![sample of language-tex package](./_img/preview.png "sample of language-tex package")
+![sample of language-tex package](http://github.com/yudai-nkt/language-tex/blob/master/_img/preview.png?raw=true "sample of language-tex package")
 
 ### Overview
 The `language-tex` package provides your Atom with grammar and code snippets of TeX, LaTeX, BibTeX and so on.
