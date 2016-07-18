@@ -14,6 +14,10 @@
     'name': 'keyword.control.tex'
   }
   {
+    'name': 'storage.type.function.tex'
+    'match': '\\\\[egx]?def\\b'
+  }
+  {
     'captures':
       '1':
         'name': 'keyword.control.catcode.tex'
