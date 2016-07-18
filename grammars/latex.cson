@@ -483,6 +483,12 @@
     'name': 'support.type.function.other.latex'
   }
   {
+    'match': '(\\\\(bf|it|rm|sc|sf|sl|tt))\\s'
+    'captures':
+      '1':
+        'name': 'invalid.deprecated.font.latex'
+  }
+  {
     'match': '\\\\(Declare(Expandable)?|New|Renew|Provide)DocumentCommand\\b'
     'name': 'support.type.function.xparse.latex'
   }
