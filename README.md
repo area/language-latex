@@ -23,7 +23,7 @@ Contributions are highly welcome. Feel free to report an [issue](https://github.
 
 ### License
 This package is distributed under the MIT License.
-See [LICENSE.md](./LICENSE.md) for details.
+See [LICENSE.md](https://github.com/yudai-nkt/language-tex/blob/master/LICENSE.md) for details.
 
 ---
 Copyright (c) 2016 Yudai NAKATA
