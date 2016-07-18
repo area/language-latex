@@ -1,6 +1,7 @@
+'scopeName': 'text.tex.latex.beamer'
+'name': 'LaTeX Beamer'
 'fileTypes': []
 'firstLineMatch': '^\\\\documentclass(\\[.*\\])?\\{beamer\\}'
-'name': 'LaTeX Beamer'
 'patterns': [
   {
     'begin': '(?:\\s*)((\\\\)begin)(\\{)(frame)(\\})'
@@ -42,4 +43,3 @@
     'include': 'text.tex.latex'
   }
 ]
-'scopeName': 'text.tex.latex.beamer'

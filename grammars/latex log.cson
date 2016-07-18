@@ -1,5 +1,6 @@
-'firstLineMatch': 'This is (e-p|e-up|Lua|pdf|Xe)?TeXk?, Version '
+'scopeName': 'text.log.latex'
 'name': 'LaTeX Log'
+'firstLineMatch': 'This is (e-p|e-up|Lua|pdf|Xe)?TeXk?, Version '
 'patterns': [
   {
     'match': '.*Warning:'
@@ -72,4 +73,3 @@
     ]
   }
 ]
-'scopeName': 'text.log.latex'

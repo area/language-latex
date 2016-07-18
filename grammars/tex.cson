@@ -1,10 +1,11 @@
+'scopeName': 'text.tex'
+'name': 'TeX'
 'fileTypes': [
   'sty'
   'cls'
   'bbx'
   'cbx'
 ]
-'name': 'TeX'
 'patterns': [
   {
     'captures':
@@ -220,4 +221,3 @@
         'name': 'meta.placeholder.greek.math.tex'
       }
     ]
-'scopeName': 'text.tex'

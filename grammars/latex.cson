@@ -1,8 +1,9 @@
+'scopeName': 'text.tex.latex'
+'name': 'LaTeX'
 'fileTypes': [
   'tex'
 ]
 'firstLineMatch': '^\\\\documentclass(?!.*\\{beamer\\})'
-'name': 'LaTeX'
 'patterns': [
   {
     'match': '(?=\\s)(?<=\\\\[\\w@]|\\\\[\\w@]{2}|\\\\[\\w@]{3}|\\\\[\\w@]{4}|\\\\[\\w@]{5}|\\\\[\\w@]{6})\\s'
@@ -859,4 +860,3 @@
     'include': 'text.tex'
   }
 ]
-'scopeName': 'text.tex.latex'
