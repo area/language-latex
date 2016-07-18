@@ -2,7 +2,19 @@ Changelog
 ---
 All notable changes to the project will be documented in this file.
 
-<!-- ### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.1.0...master) -->
+<!-- ### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.1.1...master) -->
+### [v0.1.1](https://github.com/yudai-nkt/language-tex/releases/tag/v0.1.1)
+#### Added
+- Matching for `\def` and its variants
+- Matching for definition macros provided by `xparse` package
+- Matching for deprecated font commands
+
+#### Changed
+- Naming of control sequences which start with `\Declare`
+
+#### Fixed
+- Relative links to `_img/preview.png` and `LICENSE.md`
+
 ### [v0.1.0](https://github.com/yudai-nkt/language-tex/releases/tag/v0.1.0)
 #### Added
 - Matching for e-TeX's extended if-primitives
