@@ -6,7 +6,9 @@ An Atom package that provides grammar and snippets of TeX and its related stuff.
 
 ### Overview
 The `language-tex` package provides your Atom with grammar and code snippets of TeX, LaTeX, BibTeX and so on.
+
 This package is a forked project of [`language-latex`](https://github.com/area/language-latex) package to fix derelict bugs and add new features.
+I appreciate the dedication the author and the contributors of the original package put into it.
 
 
 ### Install
