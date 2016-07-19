@@ -2,7 +2,14 @@ Changelog
 ---
 All notable changes to the project will be documented in this file.
 
-<!-- ### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.1.1...master) -->
+### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.1.1...master)
+#### Changed
+- Disable indent after `\begin{document}`
+- Replace spaces in grammar files' name with hyphens
+
+#### Fixed
+- Remove opening paren from matching for path of files loaded by the main source
+
 ### [v0.1.1](https://github.com/yudai-nkt/language-tex/releases/tag/v0.1.1)
 #### Added
 - Matching for `\def` and its variants
