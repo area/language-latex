@@ -7,8 +7,8 @@
     'foldEndPattern': '^\\s*[)}]\\s*$'
 '.text.tex.latex':
   'editor':
-    'increaseIndentPattern': '^\\s*\\\\begin\\{.*\\}'
-    'decreaseIndentPattern': '^\\s*\\\\end(\\{.*\\})?$'
+    'increaseIndentPattern': '^\\s*\\\\begin\\{(?!document).*\\}'
+    'decreaseIndentPattern': '^\\s*\\\\end(\\{(?!document).*\\})?$'
     'completions': [
       'corollary'
       'definition'
