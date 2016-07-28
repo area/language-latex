@@ -28,7 +28,7 @@
         'name': 'punctuation.separator.key-value.tex'
       '4':
         'name': 'constant.numeric.category.tex'
-    'match': '((\\\\)catcode)`(?:\\\\)?.(=)(\\d+)'
+    'match': '((\\\\)k?catcode)`(?:\\\\)?.(=)(\\d+)'
     'name': 'meta.catcode.tex'
   }
   {
