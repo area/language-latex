@@ -33,13 +33,13 @@
 # environement
   '\\begin{}...\\end{}':
     'prefix': 'begin'
-    'body': '\\\\begin{${1:env}}\n\t$0\n\\\\end{${1:env}}'
+    'body': '\\\\begin{${1:env}}$2\n\t$0\n\\\\end{${1:env}}'
   'align(*)':
     'prefix': 'align'
     'body': '\\\\begin{align$1}\n\t$0\n\\\\end{align$1}'
   'aligned':
     'prefix': 'aligned'
-    'body': '\\\\begin{aligned}[$1]\n\t$0\n\\\\end{aligned}'
+    'body': '\\\\begin{aligned}$1\n\t$0\n\\\\end{aligned}'
   'description':
     'prefix': 'description'
     'body': '\\\\begin{description}\n\t\\\\item[$1]$0\n\\\\end{description}'
@@ -57,7 +57,7 @@
       'body': '\\\\begin{gather$1}\n\t$0\n\\\\end{gather$1}'
   'gathered':
       'prefix': 'gathered'
-      'body': '\\\\begin{gathered}[$1]\n\t$0\n\\\\end{gathered}'
+      'body': '\\\\begin{gathered}$1\n\t$0\n\\\\end{gathered}'
   'itemize':
     'prefix': 'itemize'
     'body': '\\\\begin{itemize}\n\t\\\\item $0\n\\\\end{itemize}'
