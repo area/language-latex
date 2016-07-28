@@ -64,6 +64,9 @@
   'table':
     'prefix': 'table'
     'body': '\\\\begin{table}\n\t\\\\caption{$1}\n\t\\\\label{$3}\n\t$2\n\\\\end{table}'
+  'tabular':
+    'prefix': 'tabular'
+    'body': '\\\\begin{tabular}{${1:column alignment}}\n\t$0\n\\\\end{tabular}'
 
 # element
   'inline math - $$':
