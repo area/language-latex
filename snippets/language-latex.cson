@@ -74,6 +74,7 @@
     'body': '$$1$$0'
 
 # math, taken from  https://github.com/SublimeText/LaTeXTools/blob/master/LaTeX%20math.sublime-completions
+'.text.tex.latex .string.other.math':
   'math italic':
     'prefix': 'it'
     'body': '\\\\mathit{$1}$0'
