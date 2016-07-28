@@ -51,7 +51,7 @@
     'body': '\\\\begin{equation$1}\n\t$0\n\\\\end{equation$1}'
   'figure':
     'prefix': 'figure'
-    'body': '\\\\begin{figure}\n\t\\\\includegraphics$2{${1:/path/to/figure}}\n\t\\\\caption{$3}\n\\\\end{figure}'
+    'body': '\\\\begin{figure}\n\t\\\\includegraphics$2{${1:/path/to/figure}}\n\t\\\\caption{$3}\n\t\\\\label{$4}\n\\\\end{figure}'
   'gather(*)':
       'prefix': 'gather'
       'body': '\\\\begin{gather$1}\n\t$0\n\\\\end{gather$1}'
@@ -63,7 +63,7 @@
     'body': '\\\\begin{itemize}\n\t\\\\item $0\n\\\\end{itemize}'
   'table':
     'prefix': 'table'
-    'body': '\\\\begin{table}\n\t\\\\caption{$1}\n\t$2\n\\\\end{table}'
+    'body': '\\\\begin{table}\n\t\\\\caption{$1}\n\t\\\\label{$3}\n\t$2\n\\\\end{table}'
 
 # element
   'inline math - $$':
