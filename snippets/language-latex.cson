@@ -37,9 +37,6 @@
   'align(*)':
     'prefix': 'align'
     'body': '\\\\begin{align$1}\n\t$0\n\\\\end{align$1}'
-  'aligned':
-    'prefix': 'aligned'
-    'body': '\\\\begin{aligned}$1\n\t$0\n\\\\end{aligned}'
   'description':
     'prefix': 'description'
     'body': '\\\\begin{description}\n\t\\\\item[$1]$0\n\\\\end{description}'
@@ -55,9 +52,6 @@
   'gather(*)':
       'prefix': 'gather'
       'body': '\\\\begin{gather$1}\n\t$0\n\\\\end{gather$1}'
-  'gathered':
-      'prefix': 'gathered'
-      'body': '\\\\begin{gathered}$1\n\t$0\n\\\\end{gathered}'
   'itemize':
     'prefix': 'itemize'
     'body': '\\\\begin{itemize}\n\t\\\\item $0\n\\\\end{itemize}'
@@ -96,6 +90,12 @@
   'fraction':
     'prefix': 'frac'
     'body': '\\\\frac{$1}{$2}$0'
+  'aligned':
+    'prefix': 'aligned'
+    'body': '\\\\begin{aligned}$1\n\t$0\n\\\\end{aligned}'
+  'gathered':
+    'prefix': 'gathered'
+    'body': '\\\\begin{gathered}$1\n\t$0\n\\\\end{gathered}'
 
 # Beamer
 '.text.tex.latex.beamer':
