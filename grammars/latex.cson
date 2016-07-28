@@ -1717,6 +1717,24 @@
     ]
   }
   {
+    'begin': '(\\\\bibitem)(\\{)'
+    'beginCaptures':
+      '1':
+        'name': 'keyword.control.bibitem.latex'
+      '2':
+        'name': 'punctuation.definition.arguments.begin.latex'
+    'end': '\\}'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.arguments.end.latex'
+    'patterns': [
+      {
+        'match': '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
+        'name': 'constant.other.reference.bibitem.latex'
+      }
+    ]
+  }
+  {
     'begin': '((\\\\)(?:\\w*[r|R]ef\\*?))(\\{)'
     'beginCaptures':
       '1':
