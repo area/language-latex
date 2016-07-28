@@ -96,6 +96,9 @@
   'gathered':
     'prefix': 'gathered'
     'body': '\\\\begin{gathered}$1\n\t$0\n\\\\end{gathered}'
+  'matrix':
+    'prefix': 'matrix'
+    'body': '\\\\begin{$1matrix$2}$3\n\t$0\n\\\\end{$1matrix$2}'
 
 # Beamer
 '.text.tex.latex.beamer':
