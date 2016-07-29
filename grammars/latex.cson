@@ -1384,7 +1384,7 @@
     'name': 'meta.function.end-document.latex'
   }
   {
-    'begin': '(?x)\n\t\t\t\t\t(?:\\s*)\t\t\t\t\t\t\t\t\t\t# Optional whitespace\n\t\t\t\t\t((\\\\)begin)\t\t\t\t\t\t\t\t\t# Marker - Function\n\t\t\t\t\t(\\{)\t\t\t\t\t\t\t\t\t\t# Open Bracket\n\t\t\t\t\t\t(\n\t\t\t\t\t\t\t(?:\n\t\t\t\t\t\t\t\talign|equation|eqnarray\t\t\t# Argument\n\t\t\t\t\t\t\t  | multline\n\t\t\t\t\t\t\t  | split|gather\n\t\t\t\t\t\t\t)\n\t\t\t\t\t\t\t(?:\\*)?\t\t\t\t\t\t\t\t# Optional Unnumbered\n\t\t\t\t\t\t)\n\t\t\t\t\t(\\})\t\t\t\t\t\t\t\t\t\t# Close Bracket\n\t\t\t\t\t(\\s*\\n)?\t\t\t\t# Match to end of line absent of content\n\t\t\t\t'
+    'begin': '(?x)\n\t\t\t\t\t(?:\\s*)\t\t\t\t\t\t\t\t\t\t# Optional whitespace\n\t\t\t\t\t((\\\\)begin)\t\t\t\t\t\t\t\t\t# Marker - Function\n\t\t\t\t\t(\\{)\t\t\t\t\t\t\t\t\t\t# Open Bracket\n\t\t\t\t\t\t(\n\t\t\t\t\t\t\t(?:\n\t\t\t\t\t\t\t\talign|equation\t\t\t# Argument\n\t\t\t\t\t\t\t  | multline\n\t\t\t\t\t\t\t  | split|gather\n\t\t\t\t\t\t\t)\n\t\t\t\t\t\t\t(?:\\*)?\t\t\t\t\t\t\t\t# Optional Unnumbered\n\t\t\t\t\t\t)\n\t\t\t\t\t(\\})\t\t\t\t\t\t\t\t\t\t# Close Bracket\n\t\t\t\t\t(\\s*\\n)?\t\t\t\t# Match to end of line absent of content\n\t\t\t\t'
     'captures':
       '1':
         'name': 'support.function.be.latex'
@@ -1452,6 +1452,28 @@
         'name': 'variable.parameter.latex'
       '8':
         'name': 'punctuation.definition.arguments.optional.end.latex'
+    'contentName': 'string.other.math.block.environment.latex'
+    'end': '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
+    'name': 'meta.function.environment.math.latex'
+    'patterns': [
+      {
+        'include': '$base'
+      }
+    ]
+  }
+  {
+    'begin': '(?:\\s*)((\\\\)begin)(\\{)((?:eqnarray)(?:\\*)?)(\\})'
+    'captures':
+      '1':
+        'name': 'support.function.be.latex'
+      '2':
+        'name': 'punctuation.definition.function.latex'
+      '3':
+        'name': 'punctuation.definition.arguments.begin.latex'
+      '4':
+        'name': 'invalid.deprecated.environment.eqnarray.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.end.latex'
     'contentName': 'string.other.math.block.environment.latex'
     'end': '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
     'name': 'meta.function.environment.math.latex'
