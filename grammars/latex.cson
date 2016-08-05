@@ -105,7 +105,7 @@
         'name': 'support.function.ExplSyntax.tex'
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(coffee(?:-?script)?)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(coffee(?:-?script)?)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -131,7 +131,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.coffee'
     'patterns': [
@@ -141,7 +141,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(css)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(css)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -167,7 +167,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.css'
     'patterns': [
@@ -177,7 +177,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(less)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(less)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -203,7 +203,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.css.less'
     'patterns': [
@@ -213,7 +213,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(xml)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(xml)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -239,7 +239,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.xml'
     'patterns': [
@@ -249,7 +249,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(ruby|rb)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(ruby|rb)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -275,7 +275,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.ruby'
     'patterns': [
@@ -285,7 +285,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(rust)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(rust)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -311,7 +311,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.rust'
     'patterns': [
@@ -321,7 +321,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(java)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(java)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -347,7 +347,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.java'
     'patterns': [
@@ -357,7 +357,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(scala)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(scala)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -383,7 +383,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.scala'
     'patterns': [
@@ -393,7 +393,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(erlang)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(erlang)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -419,7 +419,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.erlang'
     'patterns': [
@@ -429,7 +429,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(go)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(go)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -455,7 +455,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.go'
     'patterns': [
@@ -465,7 +465,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(csharp)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(csharp)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -491,7 +491,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.cs'
     'patterns': [
@@ -501,7 +501,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(php[345]?)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(php[345]?)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -527,7 +527,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.php'
     'patterns': [
@@ -537,7 +537,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(shell|bash|sh|ksh)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(shell|bash|sh|ksh)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -563,7 +563,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.shell'
     'patterns': [
@@ -573,7 +573,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(python3?|py3?)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(python3?|py3?)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -599,7 +599,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.python'
     'patterns': [
@@ -609,7 +609,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(c)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(c)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -635,7 +635,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.c'
     'patterns': [
@@ -645,7 +645,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(cpp|c\\+\\+)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(cpp|c\\+\\+)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -671,7 +671,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.cpp'
     'patterns': [
@@ -681,7 +681,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(objective-?c|obj-?c)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(objective-?c|obj-?c)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -707,7 +707,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.objc'
     'patterns': [
@@ -717,7 +717,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(swift)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(swift)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -743,7 +743,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.swift'
     'patterns': [
@@ -753,7 +753,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(html)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(html)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -779,7 +779,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'text.embedded.html.basic'
     'patterns': [
@@ -789,7 +789,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(yaml)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(yaml)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -815,7 +815,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.yaml'
     'patterns': [
@@ -825,7 +825,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(elixir|ex|exs)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(elixir|ex|exs)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -851,7 +851,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.elixir'
     'patterns': [
@@ -861,7 +861,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(diff|udiff)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(diff|udiff)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -887,7 +887,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.diff'
     'patterns': [
@@ -897,7 +897,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(julia|jl)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(julia|jl)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -923,7 +923,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.julia'
     'patterns': [
@@ -933,7 +933,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(haskell|hs)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(haskell|hs)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -959,7 +959,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.haskell'
     'patterns': [
@@ -969,7 +969,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(clojure|clj)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(clojure|clj)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -995,7 +995,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.clojure'
     'patterns': [
@@ -1005,7 +1005,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(sql)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(sql)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -1031,7 +1031,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.sql'
     'patterns': [
@@ -1041,7 +1041,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(elm)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(elm)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -1067,7 +1067,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.elm'
     'patterns': [
@@ -1077,7 +1077,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(js)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(js)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -1103,7 +1103,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.js'
     'patterns': [
@@ -1113,7 +1113,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(json)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(json)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -1139,7 +1139,7 @@
         'name': 'punctuation.definition.arguments.end.latex'
       '12':
         'name': 'comment.line.percentage.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
     'contentName': 'source.embedded.json'
     'patterns': [
@@ -1149,7 +1149,7 @@
     ]
   }
   {
-    'begin': '(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(.*)(\\})(\\s*%.*\\n?)?)'
+    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(.*)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':
         'name': 'meta.function.embedded.latex'
@@ -1176,7 +1176,7 @@
       '12':
         'name': 'comment.line.percentage.latex'
     'contentName': 'meta.function.embedded.latex'
-    'end': '(((\\\\)end)(\\{)(minted)(\\}))'
+    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
     'name': 'meta.embedded.block.source'
   }
   {
