@@ -2,8 +2,16 @@ Changelog
 ---
 All notable changes to the project will be documented in this file.
 
-### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.2.0...master)
-Please see the link above.
+### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.2.1...master)
+Please see the link above though it is not well summarized.
+
+### [v0.2.1](https://github.com/yudai-nkt/language-tex/compare/v0.2.0...v0.2.1)
+#### Added
+- Grammar for deprecated `eqnarray` environment
+
+#### Fixed
+- Improper parsing of `aligned`, `gathered` and `alignat`'s (optional) argument
+- Unrecognized `minted` environment with preceding spaces ([#8](https://github.com/yudai-nkt/language-tex/pull/8))
 
 ### [v0.2.0](https://github.com/yudai-nkt/language-tex/compare/v0.1.1...v0.2.0)
 #### Added
