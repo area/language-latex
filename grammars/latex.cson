@@ -1,5 +1,6 @@
 'fileTypes': [
   'tex'
+  'tikz'
 ]
 'firstLineMatch': '^\\\\documentclass(?!.*\\{beamer\\})'
 'name': 'LaTeX'
