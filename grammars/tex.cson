@@ -3,6 +3,7 @@
   'cls'
   'bbx'
   'cbx'
+  'lco'
 ]
 'name': 'TeX'
 'patterns': [
