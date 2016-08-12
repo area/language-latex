@@ -1813,7 +1813,7 @@
     ]
   }
   {
-    'begin': '((\\\\)(?:\\w*[r|R]ef\\*?))(\\{)'
+    'begin': '((\\\\)(?:\\w*[rR]ef\\*?))(\\{)'
     'beginCaptures':
       '1':
         'name': 'keyword.control.ref.latex'
