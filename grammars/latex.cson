@@ -58,7 +58,7 @@
     ]
   }
   {
-    'begin': '(?x)\n\t\t\t\t(\t\t\t\t\t\t\t\t\t\t\t\t\t# Capture 1\n\t\t\t\t\t(\\\\)\t\t\t\t\t\t\t\t\t\t\t# Marker\n\t\t\t\t\t(\n\t\t\t\t\t\t(?:sub){0,2}section\t\t\t\t\t\t\t# Functions\n\t\t\t\t\t  | (?:sub)?paragraph\n\t\t\t\t\t  | chapter|part|addpart\n\t\t\t\t\t  | addchap|addsec|minisec\n\t\t\t\t\t)\n\t\t\t\t\t(?:\\*)?\t\t\t\t\t\t\t\t\t\t\t# Optional Unnumbered\n\t\t\t\t)\n\t\t\t\t(?:\n\t\t\t\t\t(\\[)([^\\[]*?)(\\])\t\t\t\t\t\t\t\t# Optional Title\n\t\t\t\t)??\n\t\t\t\t(\\{)\t\t\t\t\t\t\t\t\t\t\t\t# Opening Bracket\n\t\t\t\t'
+    'begin': '(?x)\n\t\t\t\t(\t\t\t\t\t\t\t\t\t\t\t\t\t# Capture 1\n\t\t\t\t\t(\\\\)\t\t\t\t\t\t\t\t\t\t\t# Marker\n\t\t\t\t\t(\n\t\t\t\t\t\t(?:sub){0,2}section\t\t\t\t\t\t\t# Functions\n\t\t\t\t\t  | (?:sub)?paragraph\n\t\t\t\t\t  | chapter|part|addpart\n\t\t\t\t\t  | addchap|addsec|minisec\n\t\t\t\t\t)\n\t\t\t\t\t)(?:\\*)?\t\t\t\t\t\t\t\t\t\t\t# Optional Unnumbered\n\t\t\t\t\n\t\t\t\t(?:\n\t\t\t\t\t(\\[)([^\\[]*?)(\\])\t\t\t\t\t\t\t\t# Optional Title\n\t\t\t\t)??\n\t\t\t\t(\\{)\t\t\t\t\t\t\t\t\t\t\t\t# Opening Bracket\n\t\t\t\t'
     'beginCaptures':
       '1':
         'name': 'support.function.section.latex'
