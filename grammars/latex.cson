@@ -1180,113 +1180,54 @@
     'name': 'meta.embedded.block.source'
   }
   {
-    'begin': '(^\\s*)?(?=\\\\begin\\{lstlisting\\})'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.whitespace.embedded.leading.latex'
-    'end': '(?!\\G)(\\s*$\\n?)?'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.whitespace.embedded.trailing.latex'
+    'begin': '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})(\\[)(?:.*\\blanguage\\s*=\\s*Java\\b.*)(\\])'
+    'captures':
+      '1':
+        'name': 'support.function.be.latex'
+      '2':
+        'name': 'punctuation.definition.arguments.begin.latex'
+      '3':
+        'name': 'variable.parameter.function.latex'
+      '4':
+        'name': 'punctuation.definition.arguments.end.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.optional.begin.latex'
+      '6':
+        'name': 'variable.parameter.function.latex'
+      '7':
+        'name': 'punctuation.definition.arguments.optional.end.latex'
+    'end': '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
+    'name': 'meta.embedded.block.source'
+    'contentName': 'source.embedded.java'
     'patterns': [
       {
-        'begin': '(((\\\\)begin)(\\{)(lstlisting)(\\})(?:(\\[).*(\\]))?(\\s*%\\s*(?i:Java)\\n?))'
-        'captures':
-          '1':
-            'name': 'meta.function.embedded.latex'
-          '2':
-            'name': 'support.function.be.latex'
-          '3':
-            'name': 'punctuation.definition.function.latex'
-          '4':
-            'name': 'punctuation.definition.arguments.begin.latex'
-          '5':
-            'name': 'variable.parameter.function.latex'
-          '6':
-            'name': 'punctuation.definition.arguments.end.latex'
-          '7':
-            'name': 'punctuation.definition.arguments.optional.begin.latex'
-          '8':
-            'name': 'punctuation.definition.arguments.optional.end.latex'
-          '9':
-            'name': 'comment.line.percentage.latex'
-        'contentName': 'meta.function.embedded.latex'
-        'end': '(((\\\\)end)(\\{)(lstlisting)(\\}))'
-        'name': 'meta.embedded.block.java'
-        'patterns': [
-          {
-            'begin': '^(?!\\\\end\\{lstlisting\\})'
-            'end': '(?=\\\\end\\{lstlisting\\})'
-            'name': 'source.java'
-            'patterns': [
-              {
-                'include': 'source.java'
-              }
-            ]
-          }
-        ]
+        'include': 'source.java'
       }
+    ]
+  }
+  {
+    'begin': '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})(\\[)(?:.*\\blanguage\\s*=\\s*Python\\b.*)(\\])'
+    'captures':
+      '1':
+        'name': 'support.function.be.latex'
+      '2':
+        'name': 'punctuation.definition.arguments.begin.latex'
+      '3':
+        'name': 'variable.parameter.function.latex'
+      '4':
+        'name': 'punctuation.definition.arguments.end.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.optional.begin.latex'
+      '6':
+        'name': 'variable.parameter.function.latex'
+      '7':
+        'name': 'punctuation.definition.arguments.optional.end.latex'
+    'end': '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
+    'name': 'meta.embedded.block.source'
+    'contentName': 'source.embedded.python'
+    'patterns': [
       {
-        'begin': '(((\\\\)begin)(\\{)(lstlisting)(\\})(?:(\\[).*(\\]))?(\\s*%\\s*(?i:Python)\\n?))'
-        'captures':
-          '1':
-            'name': 'meta.function.embedded.latex'
-          '2':
-            'name': 'support.function.be.latex'
-          '3':
-            'name': 'punctuation.definition.function.latex'
-          '4':
-            'name': 'punctuation.definition.arguments.begin.latex'
-          '5':
-            'name': 'variable.parameter.function.latex'
-          '6':
-            'name': 'punctuation.definition.arguments.end.latex'
-          '7':
-            'name': 'punctuation.definition.arguments.optional.begin.latex'
-          '8':
-            'name': 'punctuation.definition.arguments.optional.end.latex'
-          '9':
-            'name': 'comment.line.percentage.latex'
-        'contentName': 'meta.function.embedded.latex'
-        'end': '(((\\\\)end)(\\{)(lstlisting)(\\}))'
-        'name': 'meta.embedded.block.python'
-        'patterns': [
-          {
-            'begin': '^(?!\\\\end\\{lstlisting\\})'
-            'end': '(?=\\\\end\\{lstlisting\\})'
-            'name': 'source.python'
-            'patterns': [
-              {
-                'include': 'source.python'
-              }
-            ]
-          }
-        ]
-      }
-      {
-        'begin': '(((\\\\)begin)(\\{)(lstlisting)(\\})(?:(\\[).*(\\]))?(\\s*%.*\\n?)?)'
-        'captures':
-          '1':
-            'name': 'meta.function.embedded.latex'
-          '2':
-            'name': 'support.function.be.latex'
-          '3':
-            'name': 'punctuation.definition.function.latex'
-          '4':
-            'name': 'punctuation.definition.arguments.begin.latex'
-          '5':
-            'name': 'variable.parameter.function.latex'
-          '6':
-            'name': 'punctuation.definition.arguments.end.latex'
-          '7':
-            'name': 'punctuation.definition.arguments.optional.begin.latex'
-          '8':
-            'name': 'punctuation.definition.arguments.optional.end.latex'
-          '9':
-            'name': 'comment.line.percentage.latex'
-        'contentName': 'meta.function.embedded.latex'
-        'end': '(((\\\\)end)(\\{)(lstlisting)(\\}))'
-        'name': 'meta.embedded.block.generic'
+        'include': 'source.python'
       }
     ]
   }
