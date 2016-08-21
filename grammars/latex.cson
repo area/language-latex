@@ -86,23 +86,54 @@
     ]
   }
   {
-    'begin': '(\\\\ExplSyntaxOn|\\\\ProvidesExplPackage)'
+    'begin': '\\\\ExplSyntaxOn'
     'beginCaptures':
       '0':
-        'name': 'support.function.ExplSyntax.tex'
-    'patterns':[
-      {
-        'match': '(\\\\)[A-Za-z@_]+_[A-Za-z@_]+(:[nNpTFDwcVvxof]+)?'
-        'name': 'support.function.expl3.tex'
-      }
-      {
-        'include': '$self'
-      }
-    ]
-    'end': '(\\\\ExplSyntaxOff|\Z)'
+        'name': 'support.function.expl3.latex'
+    'end': '\\\\ExplSyntaxOff'
     'endCaptures':
       '0':
-        'name': 'support.function.ExplSyntax.tex'
+        'name': 'support.function.expl3.latex'
+    'patterns':[
+      {
+        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+):([nNpTFDwcVvxof]+)'
+        'captures':
+          '1':
+            'name': 'support.function.expl3.latex'
+          '2':
+            'name': 'support.function.type.expl3.latex'
+      }
+      {
+        'match': '(\\\\[lgc](?:_){1,2}(?:[a-zA-Z]+_)?[a-zA-Z_]+_[a-zA-Z]+)'
+        'name': 'support.variable.expl3.latex'
+      }
+      {
+        'include': '$base'
+      }
+    ]
+  }
+  {
+    'begin': '\\\\ProvidesExplPackage'
+    'beginCaptures':
+      '0':
+        'name': 'support.function.expl3.latex'
+    'patterns':[
+      {
+        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+):([nNpTFDwcVvxof]+)'
+        'captures':
+          '1':
+            'name': 'support.function.expl3.latex'
+          '2':
+            'name': 'support.function.type.expl3.latex'
+      }
+      {
+        'match': '(\\\\[lgc](?:_){1,2}(?:[a-zA-Z]+_)?[a-zA-Z_]+_[a-zA-Z]+)'
+        'name': 'support.variable.expl3.latex'
+      }
+      {
+        'include': '$base'
+      }
+    ]
   }
   {
     'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(coffee(?:-?script)?)(\\})(\\s*%.*\\n?)?)'
