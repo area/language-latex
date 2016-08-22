@@ -96,11 +96,13 @@
         'name': 'support.function.expl3.latex'
     'patterns':[
       {
-        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+):([nNpTFDwcVvxof]*)'
+        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+)(:)([nNpTFDwcVvxof]*)'
         'captures':
           '1':
             'name': 'support.function.expl3.latex'
           '2':
+            'name': 'punctuation.function.colon.expl3.latex'
+          '3':
             'name': 'support.function.type.expl3.latex'
       }
       {
@@ -119,11 +121,13 @@
         'name': 'support.function.expl3.latex'
     'patterns':[
       {
-        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+):([nNpTFDwcVvxof]*)'
+        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+)(:)([nNpTFDwcVvxof]*)'
         'captures':
           '1':
             'name': 'support.function.expl3.latex'
           '2':
+            'name': 'punctuation.function.colon.expl3.latex'
+          '3':
             'name': 'support.function.type.expl3.latex'
       }
       {
