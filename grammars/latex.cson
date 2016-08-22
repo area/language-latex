@@ -96,7 +96,7 @@
         'name': 'support.function.expl3.latex'
     'patterns':[
       {
-        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+):([nNpTFDwcVvxof]+)'
+        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+):([nNpTFDwcVvxof]*)'
         'captures':
           '1':
             'name': 'support.function.expl3.latex'
@@ -119,7 +119,7 @@
         'name': 'support.function.expl3.latex'
     'patterns':[
       {
-        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+):([nNpTFDwcVvxof]+)'
+        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+):([nNpTFDwcVvxof]*)'
         'captures':
           '1':
             'name': 'support.function.expl3.latex'
