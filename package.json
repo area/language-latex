@@ -1,6 +1,6 @@
 {
   "name": "language-tex",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "author": "Yudai Nakata",
   "description": "Grammar and snippets of TeX and its related stuff for Atom",
   "keywords": [
