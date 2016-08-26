@@ -65,22 +65,6 @@
     ]
   }
   {
-    'begin': '\\{'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.section.group.begin.tex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.section.group.end.tex'
-    'name': 'meta.group.braces.tex'
-    'patterns': [
-      {
-        'include': '$base'
-      }
-    ]
-  }
-  {
     'match': '[\\[\\]]'
     'name': 'punctuation.definition.brackets.tex'
   }
