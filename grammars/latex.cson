@@ -1879,7 +1879,7 @@
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.latex'
-    'name': 'string.quoted.double.european.latex'
+    'name': 'string.quoted.double.low-high.latex'
     'patterns': [
       {
         'include': '$base'
@@ -1891,11 +1891,27 @@
     'beginCaptures':
       '0':
         'name': 'punctuation.definition.string.begin.latex'
-    'end': '\'\'|"'
+    'end': '\'\''
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.latex'
     'name': 'string.quoted.double.latex'
+    'patterns': [
+      {
+        'include': '$base'
+      }
+    ]
+  }
+  {
+    'begin': '`'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.latex'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.latex'
+    'name': 'string.quoted.single.latex'
     'patterns': [
       {
         'include': '$base'
@@ -1911,7 +1927,7 @@
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.latex'
-    'name': 'string.quoted.double.guillemot.latex'
+    'name': 'string.quoted.double.guillemot.reversed.latex'
     'patterns': [
       {
         'include': '$base'
@@ -1965,14 +1981,6 @@
         'include': '$base'
       }
     ]
-  }
-  {
-    'match': '(?<!\\S)\'.*?\''
-    'name': 'invalid.illegal.string.quoted.single.latex'
-  }
-  {
-    'match': '(?<!\\S)".*?"'
-    'name': 'invalid.illegal.string.quoted.double.latex'
   }
   {
     'captures':
