@@ -2,8 +2,24 @@ Changelog
 ---
 All notable changes to the project will be documented in this file.
 
-### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.2.1...master)
+### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.3.0...master)
 Please see the link above though it is not well summarized.
+
+### [v0.3.0](https://github.com/yudai-nkt/language-tex/compare/v0.2.1...v0.3.0)
+#### Added
+- Grammar for Beamer's `\usetheme` and its components
+- Grammar for single quotation
+
+#### Changed
+- Separate star from leading sectioning commands
+- Distinguish function and variable in `expl3` syntax
+- Remove two `invalid.illegal.string.quoted`s, which just do not get ligatured by LaTeX's feature
+- Remove `meta.group.braces.tex` attribute
+
+#### Fixed
+- Improper parsing of cross reference commands ending with `ref` or `Ref`
+- Unrecognized grammar of embedded sources in `lstlisting` environment
+- Unrecognized expl3 syntax inside brackets ([#9](https://github.com/yudai-nkt/language-tex/issues/9))
 
 ### [v0.2.1](https://github.com/yudai-nkt/language-tex/compare/v0.2.0...v0.2.1)
 #### Added
@@ -61,7 +77,7 @@ Please see the link above though it is not well summarized.
 - Escaped dollar sign in `minted` environment ([area/language-latex#75](https://github.com/area/language-latex/issues/75))
 - Incorrect naming of `\label`'s argument ([#1](https://github.com/yudai-nkt/language-tex/pull/1))
 
-### [v0.0.0](https://github.com/yudai-nkt/language-tex/releases/tag/v0.0.0)
+### [v0.0.0](https://github.com/yudai-nkt/language-tex/compare/38c445d9bfe5abaa1703d01f95a7090726e1339e...v0.0.0)
 This version is identical with the area's `language-latex` package as of August 2015 except for the following change:
 
 - Updated `package.json` as a new package
