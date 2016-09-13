@@ -2,8 +2,12 @@ Changelog
 ---
 All notable changes to the project will be documented in this file.
 
-### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.3.0...master)
+### [Unreleased](https://github.com/yudai-nkt/language-tex/compare/v0.3.1...master)
 Please see the link above though it is not well summarized.
+
+### [v0.3.1](https://github.com/yudai-nkt/language-tex/compare/v0.3.0...v0.3.1)
+#### Fixed
+- Improper parsing of nested curly braces ([#11](https://github.com/yudai-nkt/language-tex/issues/11))
 
 ### [v0.3.0](https://github.com/yudai-nkt/language-tex/compare/v0.2.1...v0.3.0)
 #### Added
