@@ -52,7 +52,7 @@
           '1':
             'name': 'punctuation.definition.comment.tex'
         'end': '$\\n?'
-        'name': 'comment.line.percentage.directive.texshop.tex'
+        'name': 'comment.line.percentage.magic.tex'
       }
       {
         'begin': '%'
