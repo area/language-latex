@@ -47,7 +47,7 @@
         'name': 'comment.line.percentage.semicolon.texshop.tex'
       }
       {
-        'begin': '^(%!TEX) (\\S*) ='
+        'begin': '^(%\\s*!T[eE]X)\\s+(\\w+)\\s*='
         'beginCaptures':
           '1':
             'name': 'punctuation.definition.comment.tex'
