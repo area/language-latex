@@ -8,8 +8,8 @@
   "engines": {
   "atom": ">0.50.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+      "latex"
+    ]
 }
-"keywords": [
-    "latex",
-  ],
