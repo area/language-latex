@@ -1,25 +1,30 @@
-# Language-LaTeX package
+`language-tex` package
+---
+An Atom package that provides grammar and snippets of TeX and its related stuff.
 
-Syntax highlighting and Snippets for LaTeX in atom. This package was derived from the [LaTeX TextMate bundle](https://github.com/textmate/latex.tmbundle).
+![sample of language-tex package](https://github.com/yudai-nkt/language-tex/blob/master/_img/preview.png?raw=true "sample of language-tex package")
 
-![Screenshot](https://cloud.githubusercontent.com/assets/6838481/9054418/611c6728-3a81-11e5-826b-069b72fffa48.png)
+### Overview
+The `language-tex` package provides your Atom with grammar and code snippets of TeX, LaTeX, BibTeX and so on.
 
-------------------------  
+This package is a forked project of [`language-latex`](https://github.com/area/language-latex) package to fix derelict bugs and add new features.
+I appreciate the dedication the author and the contributors of the original package put into it.
 
-## Install
-#### To install via gui:
-In atom go to Settings/Preferences ➔ Packages ➔ Search for `language-latex`
+### Install
+Just run the following command:
 
-#### To install via command line:
 ```bash
-apm install language-latex
+apm install language-tex
 ```
 
-## Project's Activity
-[![Throughput Graph](https://graphs.waffle.io/area/language-latex/throughput.svg)](https://waffle.io/area/language-latex/metrics)
+If you prefer installation via GUI, you can go to `Atom` > `Settings` > `Install`, search for `language-tex` in Packages tab and install it.
 
-## Contributing
-Please update the [CHANGELOG.md](https://github.com/area/language-latex/blob/master/CHANGELOG.md) and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests) when contributing.
+### Contribution
+Contributions are highly welcome. Feel free to report an [issue](https://github.com/yudai-nkt/language-tex/issues) or create a [pull request](https://github.com/yudai-nkt/language-tex/pulls).
 
-## License
-Language-LaTeX is released under the [MIT](https://github.com/area/language-latex/blob/master/LICENSE.md) license.
+### License
+This package is distributed under the MIT License.
+See [LICENSE.md](https://github.com/yudai-nkt/language-tex/blob/master/LICENSE.md) for details.
+
+---
+Copyright (c) 2016 Yudai NAKATA

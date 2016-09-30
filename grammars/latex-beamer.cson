@@ -1,7 +1,28 @@
+'scopeName': 'text.tex.latex.beamer'
+'name': 'LaTeX Beamer'
 'fileTypes': []
 'firstLineMatch': '^\\\\documentclass(\\[.*\\])?\\{beamer\\}'
-'name': 'LaTeX Beamer'
 'patterns': [
+  {
+    'begin': '(\\\\use(?:color|font|inner|outer)?theme)(?:(\\[)([^\\]]*)(\\]))?(\\{)'
+    'beginCaptures':
+      '1':
+        'name': 'keyword.control.preamble.latex'
+      '2':
+        'name': 'punctuation.definition.arguments.optional.begin.latex'
+      '3':
+        'name': 'variable.parameter.latex'
+      '4':
+        'name': 'punctuation.definition.arguments.optional.end.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.begin.latex'
+    'contentName': 'support.class.latex'
+    'end': '\\}'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.arguments.end.latex'
+    'name': 'meta.preamble.latex'
+  }
   {
     'begin': '(?:\\s*)((\\\\)begin)(\\{)(frame)(\\})'
     'captures':
@@ -42,4 +63,3 @@
     'include': 'text.tex.latex'
   }
 ]
-'scopeName': 'text.tex.latex.beamer'
