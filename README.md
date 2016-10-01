@@ -1,16 +1,12 @@
-`language-tex` package
----
-An Atom package that provides grammar and snippets of TeX and its related stuff.
+# Language-LaTeX package
 
-![sample of language-tex package](https://github.com/yudai-nkt/language-tex/blob/master/_img/preview.png?raw=true "sample of language-tex package")
+Syntax highlighting and Snippets for LaTeX in atom. This package was derived from the [LaTeX TextMate bundle](https://github.com/textmate/latex.tmbundle).
 
-### Overview
-The `language-tex` package provides your Atom with grammar and code snippets of TeX, LaTeX, BibTeX and so on.
+![sample of language-latex package](https://github.com/area/language-tex/blob/master/_img/preview.png?raw=true "sample of language-latex package")
 
-This package is a forked project of [`language-latex`](https://github.com/area/language-latex) package to fix derelict bugs and add new features.
-I appreciate the dedication the author and the contributors of the original package put into it.
+------------------------
 
-### Install
+## Install
 Just run the following command:
 
 ```bash
@@ -19,12 +15,12 @@ apm install language-tex
 
 If you prefer installation via GUI, you can go to `Atom` > `Settings` > `Install`, search for `language-tex` in Packages tab and install it.
 
-### Contribution
-Contributions are highly welcome. Feel free to report an [issue](https://github.com/yudai-nkt/language-tex/issues) or create a [pull request](https://github.com/yudai-nkt/language-tex/pulls).
 
-### License
-This package is distributed under the MIT License.
-See [LICENSE.md](https://github.com/yudai-nkt/language-tex/blob/master/LICENSE.md) for details.
+## Project's Activity
+[![Throughput Graph](https://graphs.waffle.io/area/language-latex/throughput.svg)](https://waffle.io/area/language-latex/metrics)
 
----
-Copyright (c) 2016 Yudai NAKATA
+## Contributing
+Please update the [CHANGELOG.md](https://github.com/area/language-latex/blob/master/CHANGELOG.md) and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests) when contributing.
+
+## License
+Language-LaTeX is released under the [MIT](https://github.com/area/language-latex/blob/master/LICENSE.md) license.
