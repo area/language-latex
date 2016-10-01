@@ -1,15 +1,15 @@
 {
   "name": "language-latex",
-  "version": "0.6.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Syntax highlighting for LaTeX for Atom",
   "repository": "https://github.com/area/language-latex",
   "license": "MIT",
   "engines": {
-  "atom": ">0.50.0"
+    "atom": ">0.50.0"
   },
   "dependencies": {},
   "keywords": [
-      "latex"
-    ]
+    "latex"
+  ]
 }
