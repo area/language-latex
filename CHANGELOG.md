@@ -1,5 +1,7 @@
 
-## Master
+## 1.0.0
+
+This release brings us up-to-date with the huge number of improvements made by @yudai-nkt at [language-tex](https://github.com/yudai-nkt/language-tex). Given that some snippets have been removed, in conjunction with the huge number of improvements, seems time to finally hit 1.0.0.
 
 #### Added
 - Grammar for e-TeX's extended if-primitives
