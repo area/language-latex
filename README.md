@@ -2,7 +2,7 @@
 
 Syntax highlighting and Snippets for LaTeX in atom. This package was derived from the [LaTeX TextMate bundle](https://github.com/textmate/latex.tmbundle).
 
-![sample of language-latex package](https://github.com/area/language-tex/blob/master/_img/preview.png?raw=true "sample of language-latex package")
+![sample of language-latex package](https://github.com/area/language-latex/blob/master/_img/preview.png?raw=true "sample of language-latex package")
 
 ------------------------
 
