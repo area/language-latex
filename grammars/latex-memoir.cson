@@ -1,6 +1,7 @@
+'scopeName': 'text.tex.latex.memoir'
+'name': 'LaTeX Memoir'
 'fileTypes': []
 'firstLineMatch': '^\\\\documentclass(\\[.*\\])?\\{memoir\\}'
-'name': 'LaTeX Memoir'
 'patterns': [
   {
     'begin': '(?:\\s*)((\\\\)begin)(\\{)(framed|shaded|leftbar)(\\})'
@@ -70,4 +71,3 @@
     'include': 'text.tex.latex'
   }
 ]
-'scopeName': 'text.tex.latex.memoir'

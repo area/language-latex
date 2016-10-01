@@ -1,17 +1,22 @@
+'scopeName': 'text.tex'
+'name': 'TeX'
 'fileTypes': [
   'sty'
   'cls'
   'bbx'
   'cbx'
 ]
-'name': 'TeX'
 'patterns': [
   {
     'captures':
       '1':
         'name': 'punctuation.definition.keyword.tex'
-    'match': '(\\\\)(backmatter|else|fi|frontmatter|ftrue|mainmatter|if(case|cat|dim|eof|false|hbox|hmode|inner|mmode|num|odd|undefined|vbox|vmode|void|x)?)\\b'
+    'match': '(\\\\)(backmatter|else|fi|frontmatter|mainmatter|if(case|cat|csname|defined|dim|eof|false|fontchar|hbox|hmode|inner|mmode|num|odd|true|vbox|vmode|void|x)?|unless)\\b'
     'name': 'keyword.control.tex'
+  }
+  {
+    'name': 'storage.type.function.tex'
+    'match': '\\\\[egx]?def\\b'
   }
   {
     'captures':
@@ -23,7 +28,7 @@
         'name': 'punctuation.separator.key-value.tex'
       '4':
         'name': 'constant.numeric.category.tex'
-    'match': '((\\\\)catcode)`(?:\\\\)?.(=)(\\d+)'
+    'match': '((\\\\)k?catcode)`(?:\\\\)?.(=)(\\d+)'
     'name': 'meta.catcode.tex'
   }
   {
@@ -42,12 +47,12 @@
         'name': 'comment.line.percentage.semicolon.texshop.tex'
       }
       {
-        'begin': '^(%!TEX) (\\S*) ='
+        'begin': '^(%\\s*!T[eE]X)\\s+(\\w+)\\s*='
         'beginCaptures':
           '1':
             'name': 'punctuation.definition.comment.tex'
         'end': '$\\n?'
-        'name': 'comment.line.percentage.directive.texshop.tex'
+        'name': 'comment.line.percentage.magic.tex'
       }
       {
         'begin': '%'
@@ -216,4 +221,3 @@
         'name': 'meta.placeholder.greek.math.tex'
       }
     ]
-'scopeName': 'text.tex'
