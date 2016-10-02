@@ -2,6 +2,7 @@
 'name': 'LaTeX'
 'fileTypes': [
   'tex'
+  'tikz'
 ]
 'firstLineMatch': '^\\\\documentclass(?!.*\\{beamer\\})'
 'patterns': [
