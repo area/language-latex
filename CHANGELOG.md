@@ -1,7 +1,9 @@
 
 ## Master
 
+#### Fixed
 Fix plural forms for cite commands (#14)
+Add correct highlighting for textcite and parencite commands (#53)
 
 ## 1.0.0
 

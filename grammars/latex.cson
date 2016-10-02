@@ -1742,7 +1742,7 @@
     'name': 'meta.scope.item.latex'
   }
   {
-    'begin': '(?x)\n\t\t\t\t\t(\n\t\t\t\t\t\t(\\\\)\t\t\t\t\t\t\t\t\t\t# Marker\n\t\t\t\t\t\t(?:auto)?(?:foot)?(?:full)?(?:no)?(?:short)?\t\t# Function Name\n\t\t\t\t\t\t[cC]ites?\n\t\t\t\t\t\t(?:al)?(?:t|p|author|year(?:par)?|title)?[ANP]*\n\t\t\t\t\t\t\\*?\t\t\t\t\t\t\t\t\t\t\t# Optional Unabreviated\n\t\t\t\t\t)\n\t\t\t\t\t(?:(\\[)[^\\]]*(\\]))?\t\t\t\t\t\t\t\t# Optional\n\t\t\t\t\t(?:(\\[)[^\\]]*(\\]))?\t\t\t\t\t\t\t\t#   Arguments\n\t\t\t\t\t(\\{)\t\t\t\t\t\t\t\t\t\t\t# Opening Bracket\n\t\t\t\t'
+    'begin': '(?x)\n\t\t\t\t\t(\n\t\t\t\t\t\t(\\\\)\t\t\t\t\t\t\t\t\t\t# Marker\n\t\t\t\t\t\t(?:text)?(?:paren)?(?:auto)?(?:foot)?(?:full)?(?:no)?(?:short)?\t\t# Function Name\n\t\t\t\t\t\t[cC]ites?\n\t\t\t\t\t\t(?:al)?(?:t|p|author|year(?:par)?|title)?[ANP]*\n\t\t\t\t\t\t\\*?\t\t\t\t\t\t\t\t\t\t\t# Optional Unabreviated\n\t\t\t\t\t)\n\t\t\t\t\t(?:(\\[)[^\\]]*(\\]))?\t\t\t\t\t\t\t\t# Optional\n\t\t\t\t\t(?:(\\[)[^\\]]*(\\]))?\t\t\t\t\t\t\t\t#   Arguments\n\t\t\t\t\t(\\{)\t\t\t\t\t\t\t\t\t\t\t# Opening Bracket\n\t\t\t\t'
     'captures':
       '1':
         'name': 'keyword.control.cite.latex'
