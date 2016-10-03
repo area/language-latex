@@ -10,10 +10,10 @@ Syntax highlighting and Snippets for LaTeX in atom. This package was derived fro
 Just run the following command:
 
 ```bash
-apm install language-tex
+apm install language-latex
 ```
 
-If you prefer installation via GUI, you can go to `Atom` > `Settings` > `Install`, search for `language-tex` in Packages tab and install it.
+If you prefer installation via GUI, you can go to `Atom` > `Settings` > `Install`, search for `language-latex` in Packages tab and install it.
 
 
 ## Project's Activity
