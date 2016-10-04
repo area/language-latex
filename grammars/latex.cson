@@ -1772,6 +1772,38 @@
     ]
   }
   {
+    'begin': '\\\\[aA]utocites'
+    'end': '$'
+    'beginCaptures':
+      '0':
+        'name': 'keyword.control.autocites.latex'
+    'name': 'meta.reference.latex'
+    'patterns': [
+      {
+        'match': '(?:(?:(\\()(.*?)(\\))){0,2}?(?:(?:(\\[)(.*?)(\\])){0,2}(\\{)(.*?)(\\}))+?)?'
+        'captures':
+          '1':
+            'name': 'punctuation.definition.arguments.optional.begin.latex'
+          '2':
+            'name': 'variable.parameter.function.latex'
+          '3':
+            'name': 'punctuation.definition.arguments.optional.end.latex'
+          '4':
+            'name': 'punctuation.definition.arguments.optional.begin.latex'
+          '5':
+            'name': 'variable.parameter.function.latex'
+          '6':
+            'name': 'punctuation.definition.arguments.optional.end.latex'
+          '7':
+            'name': 'punctuation.definition.arguments.begin.latex'
+          '8':
+            'name': 'constant.other.reference.latex'
+          '9':
+            'name': 'punctuation.definition.arguments.end.latex'
+      }
+    ]
+  }
+  {
     'begin': '(\\\\bibitem)(\\{)'
     'beginCaptures':
       '1':
