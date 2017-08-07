@@ -1,1414 +1,1414 @@
-'scopeName': 'text.tex.latex'
-'name': 'LaTeX'
-'fileTypes': [
+scopeName: 'text.tex.latex'
+name: 'LaTeX'
+fileTypes: [
   'tex'
   'tikz'
 ]
-'limitLineLength': false
-'firstLineMatch': '^\\\\documentclass(?!.*\\{beamer\\})'
-'patterns': [
+limitLineLength: false
+firstLineMatch: '^\\\\documentclass(?!.*\\{beamer\\})'
+patterns: [
   {
-    'match': '(?=\\s)(?<=\\\\[\\w@]|\\\\[\\w@]{2}|\\\\[\\w@]{3}|\\\\[\\w@]{4}|\\\\[\\w@]{5}|\\\\[\\w@]{6})\\s'
-    'name': 'meta.space-after-command.latex'
+    match: '(?=\\s)(?<=\\\\[\\w@]|\\\\[\\w@]{2}|\\\\[\\w@]{3}|\\\\[\\w@]{4}|\\\\[\\w@]{5}|\\\\[\\w@]{6})\\s'
+    name: 'meta.space-after-command.latex'
   }
   {
-    'begin': '((\\\\)(?:usepackage|documentclass))(?:(\\[)([^\\]]*)(\\]))?(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.preamble.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.begin.latex'
-    'contentName': 'support.class.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'name': 'meta.preamble.latex'
-    'patterns': [
+    begin: '((\\\\)(?:usepackage|documentclass))(?:(\\[)([^\\]]*)(\\]))?(\\{)'
+    beginCaptures:
+      1:
+        name: 'keyword.control.preamble.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+      6:
+        name: 'punctuation.definition.arguments.begin.latex'
+    contentName: 'support.class.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.arguments.end.latex'
+    name: 'meta.preamble.latex'
+    patterns: [
       {
-        'include': '$self'
+        include: '$self'
       }
     ]
   }
   {
-    'begin': '((\\\\)(?:include|input))(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.include.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-    'contentName': 'support.class.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'name': 'meta.include.latex'
-    'patterns': [
+    begin: '((\\\\)(?:include|input))(\\{)'
+    beginCaptures:
+      1:
+        name: 'keyword.control.include.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+    contentName: 'support.class.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.arguments.end.latex'
+    name: 'meta.include.latex'
+    patterns: [
       {
-        'include': '$self'
+        include: '$self'
       }
     ]
   }
   {
-    'begin': '''(?x)
+    begin: '''(?x)
                 ((\\\\)((?:sub){0,2}section|(?:sub)?paragraph|chapter|part|addpart|addchap|addsec|minisec))(?:\\*)?
                 (?:(\\[)([^\\[]*?)(\\]))??
                 (\\{)
              '''
-    'beginCaptures':
-      '1':
-        'name': 'support.function.section.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '5':
-        'name': 'entity.name.section.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.begin.latex'
-    'comment': 'this works OK with all kinds of crazy stuff as long as section is one line'
-    'contentName': 'entity.name.section.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'name': 'meta.function.section.$3.latex'
-    'patterns': [
+    beginCaptures:
+      1:
+        name: 'support.function.section.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      5:
+        name: 'entity.name.section.latex'
+      6:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.begin.latex'
+    comment: 'this works OK with all kinds of crazy stuff as long as section is one line'
+    contentName: 'entity.name.section.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.arguments.end.latex'
+    name: 'meta.function.section.$3.latex'
+    patterns: [
       {
-        'include': '$self'
+        include: '$self'
       }
     ]
   }
   {
-    'begin': '\\\\ExplSyntaxOn'
-    'beginCaptures':
-      '0':
-        'name': 'support.function.expl3.latex'
-    'end': '\\\\ExplSyntaxOff'
-    'endCaptures':
-      '0':
-        'name': 'support.function.expl3.latex'
-    'patterns':[
+    begin: '\\\\ExplSyntaxOn'
+    beginCaptures:
+      0:
+        name: 'support.function.expl3.latex'
+    end: '\\\\ExplSyntaxOff'
+    endCaptures:
+      0:
+        name: 'support.function.expl3.latex'
+    patterns:[
       {
-        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+)(:)([nNpTFDwcVvxof]*)'
-        'captures':
-          '1':
-            'name': 'support.function.expl3.latex'
-          '2':
-            'name': 'punctuation.function.colon.expl3.latex'
-          '3':
-            'name': 'support.function.type.expl3.latex'
+        match: '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+)(:)([nNpTFDwcVvxof]*)'
+        captures:
+          1:
+            name: 'support.function.expl3.latex'
+          2:
+            name: 'punctuation.function.colon.expl3.latex'
+          3:
+            name: 'support.function.type.expl3.latex'
       }
       {
-        'match': '(\\\\[lgc](?:_){1,2}(?:[a-zA-Z]+_)?[a-zA-Z_]+_[a-zA-Z]+)'
-        'name': 'support.variable.expl3.latex'
+        match: '(\\\\[lgc](?:_){1,2}(?:[a-zA-Z]+_)?[a-zA-Z_]+_[a-zA-Z]+)'
+        name: 'support.variable.expl3.latex'
       }
       {
-        'include': '$base'
-      }
-    ]
-  }
-  {
-    'begin': '\\\\ProvidesExplPackage'
-    'beginCaptures':
-      '0':
-        'name': 'support.function.expl3.latex'
-    'patterns':[
-      {
-        'match': '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+)(:)([nNpTFDwcVvxof]*)'
-        'captures':
-          '1':
-            'name': 'support.function.expl3.latex'
-          '2':
-            'name': 'punctuation.function.colon.expl3.latex'
-          '3':
-            'name': 'support.function.type.expl3.latex'
-      }
-      {
-        'match': '(\\\\[lgc](?:_){1,2}(?:[a-zA-Z]+_)?[a-zA-Z_]+_[a-zA-Z]+)'
-        'name': 'support.variable.expl3.latex'
-      }
-      {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(\\\\begin)(\\{)(gnuplot)(\\})((\\[)(.*)(\\]))?'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '3':
-        'name': 'variable.parameter.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '6':
-        'name': 'variable.parameter.function.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-    'end': '(?:\\s*)(\\\\end)(\\{)(gnuplot)(\\})'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.gnuplot'
-    'patterns': [
+    begin: '\\\\ProvidesExplPackage'
+    beginCaptures:
+      0:
+        name: 'support.function.expl3.latex'
+    patterns:[
       {
-        'include': 'source.gnuplot'
+        match: '(\\\\(?:__)?[a-zA-Z]+_[a-zA-Z_]+)(:)([nNpTFDwcVvxof]*)'
+        captures:
+          1:
+            name: 'support.function.expl3.latex'
+          2:
+            name: 'punctuation.function.colon.expl3.latex'
+          3:
+            name: 'support.function.type.expl3.latex'
+      }
+      {
+        match: '(\\\\[lgc](?:_){1,2}(?:[a-zA-Z]+_)?[a-zA-Z_]+_[a-zA-Z]+)'
+        name: 'support.variable.expl3.latex'
+      }
+      {
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(coffee(?:-?script)?)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.coffee'
-    'patterns': [
+    begin: '(?:\\s*)(\\\\begin)(\\{)(gnuplot)(\\})((\\[)(.*)(\\]))?'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.arguments.begin.latex'
+      3:
+        name: 'variable.parameter.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.end.latex'
+      5:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      6:
+        name: 'variable.parameter.function.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+    end: '(?:\\s*)(\\\\end)(\\{)(gnuplot)(\\})'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.gnuplot'
+    patterns: [
       {
-        'include': 'source.coffee'
+        include: 'source.gnuplot'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(css)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.css'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(coffee(?:-?script)?)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.coffee'
+    patterns: [
       {
-        'include': 'source.css'
+        include: 'source.coffee'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(less)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.css.less'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(css)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.css'
+    patterns: [
       {
-        'include': 'source.css.less'
+        include: 'source.css'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(xml)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.xml'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(less)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.css.less'
+    patterns: [
       {
-        'include': 'source.xml'
+        include: 'source.css.less'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(ruby|rb)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.ruby'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(xml)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.xml'
+    patterns: [
       {
-        'include': 'source.ruby'
+        include: 'source.xml'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(rust)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.rust'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(ruby|rb)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.ruby'
+    patterns: [
       {
-        'include': 'source.rust'
+        include: 'source.ruby'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(java)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.java'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(rust)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.rust'
+    patterns: [
       {
-        'include': 'source.java'
+        include: 'source.rust'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(scala)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.scala'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(java)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.java'
+    patterns: [
       {
-        'include': 'source.scala'
+        include: 'source.java'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(erlang)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.erlang'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(scala)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.scala'
+    patterns: [
       {
-        'include': 'source.erlang'
+        include: 'source.scala'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(go)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.go'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(erlang)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.erlang'
+    patterns: [
       {
-        'include': 'source.go'
+        include: 'source.erlang'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(csharp)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.cs'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(go)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.go'
+    patterns: [
       {
-        'include': 'source.cs'
+        include: 'source.go'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(php[345]?)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.php'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(csharp)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.cs'
+    patterns: [
       {
-        'include': 'source.php'
+        include: 'source.cs'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(shell|bash|sh|ksh)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.shell'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(php[345]?)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.php'
+    patterns: [
       {
-        'include': 'source.shell'
+        include: 'source.php'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(python3?|py3?)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.python'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(shell|bash|sh|ksh)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.shell'
+    patterns: [
       {
-        'include': 'source.python'
+        include: 'source.shell'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(c)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.c'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(python3?|py3?)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.python'
+    patterns: [
       {
-        'include': 'source.c'
+        include: 'source.python'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(cpp|c\\+\\+)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.cpp'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(c)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.c'
+    patterns: [
       {
-        'include': 'source.cpp'
+        include: 'source.c'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(objective-?c|obj-?c)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.objc'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(cpp|c\\+\\+)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.cpp'
+    patterns: [
       {
-        'include': 'source.objc'
+        include: 'source.cpp'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(swift)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.swift'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(objective-?c|obj-?c)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.objc'
+    patterns: [
       {
-        'include': 'source.swift'
+        include: 'source.objc'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(html)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'text.embedded.html.basic'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(swift)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.swift'
+    patterns: [
       {
-        'include': 'text.html.basic'
+        include: 'source.swift'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(yaml)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.yaml'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(html)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'text.embedded.html.basic'
+    patterns: [
       {
-        'include': 'source.yaml'
+        include: 'text.html.basic'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(elixir|ex|exs)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.elixir'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(yaml)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.yaml'
+    patterns: [
       {
-        'include': 'source.elixir'
+        include: 'source.yaml'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(diff|udiff)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.diff'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(elixir|ex|exs)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.elixir'
+    patterns: [
       {
-        'include': 'source.diff'
+        include: 'source.elixir'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(julia|jl)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.julia'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(diff|udiff)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.diff'
+    patterns: [
       {
-        'include': 'source.julia'
+        include: 'source.diff'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(haskell|hs)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.haskell'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(julia|jl)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.julia'
+    patterns: [
       {
-        'include': 'source.haskell'
+        include: 'source.julia'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(clojure|clj)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.clojure'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(haskell|hs)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.haskell'
+    patterns: [
       {
-        'include': 'source.clojure'
+        include: 'source.haskell'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(sql)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.sql'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(clojure|clj)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.clojure'
+    patterns: [
       {
-        'include': 'source.sql'
+        include: 'source.clojure'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(elm)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.elm'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(sql)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.sql'
+    patterns: [
       {
-        'include': 'source.elm'
+        include: 'source.sql'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(js)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.js'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(elm)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.elm'
+    patterns: [
       {
-        'include': 'source.js'
+        include: 'source.elm'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(json)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.json'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(js)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.js'
+    patterns: [
       {
-        'include': 'source.json'
+        include: 'source.js'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(.*)(\\})(\\s*%.*\\n?)?)'
-    'captures':
-      '1':
-        'name': 'meta.function.embedded.latex'
-      '2':
-        'name': 'support.function.be.latex'
-      '3':
-        'name': 'punctuation.definition.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '5':
-        'name': 'variable.parameter.function.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '9':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '10':
-        'name': 'variable.parameter.function.latex'
-      '11':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '12':
-        'name': 'comment.line.percentage.latex'
-    'contentName': 'meta.function.embedded.latex'
-    'end': '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
-    'name': 'meta.embedded.block.source'
-  }
-  {
-     'begin': '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})([^\\[]|(\\[[^l].*\\])|\\[\\])'
-     'captures':
-       '1':
-         'name': 'support.function.be.latex'
-       '2':
-         'name': 'punctuation.definition.arguments.begin.latex'
-       '3':
-         'name': 'variable.parameter.function.latex'
-       '4':
-         'name': 'punctuation.definition.arguments.end.latex'
-     'end': '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
-     'name': 'meta.embedded.block.source'
-     'comment': 'default code listing for so that dollar sign does not mess up subsequent parsing'
-     'contentName': 'markup.raw.verbatim.latex'
-  }
-  {
-    'begin': '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})(\\[)(?:.*\\blanguage\\s*=\\s*Java\\b.*)(\\])'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '3':
-        'name': 'variable.parameter.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '6':
-        'name': 'variable.parameter.function.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-    'end': '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.java'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(json)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.json'
+    patterns: [
       {
-        'include': 'source.java'
+        include: 'source.json'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})(\\[)(?:.*\\blanguage\\s*=\\s*Python\\b.*)(\\])'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '3':
-        'name': 'variable.parameter.function.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '6':
-        'name': 'variable.parameter.function.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-    'end': '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
-    'name': 'meta.embedded.block.source'
-    'contentName': 'source.embedded.python'
-    'patterns': [
+    begin: '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(.*)(\\})(\\s*%.*\\n?)?)'
+    captures:
+      1:
+        name: 'meta.function.embedded.latex'
+      2:
+        name: 'support.function.be.latex'
+      3:
+        name: 'punctuation.definition.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.begin.latex'
+      5:
+        name: 'variable.parameter.function.latex'
+      6:
+        name: 'punctuation.definition.arguments.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      9:
+        name: 'punctuation.definition.arguments.begin.latex'
+      10:
+        name: 'variable.parameter.function.latex'
+      11:
+        name: 'punctuation.definition.arguments.end.latex'
+      12:
+        name: 'comment.line.percentage.latex'
+    contentName: 'meta.function.embedded.latex'
+    end: '(?:\\s*)(((\\\\)end)(\\{)(minted)(\\}))'
+    name: 'meta.embedded.block.source'
+  }
+  {
+     begin: '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})([^\\[]|(\\[[^l].*\\])|\\[\\])'
+     captures:
+       1:
+         name: 'support.function.be.latex'
+       2:
+         name: 'punctuation.definition.arguments.begin.latex'
+       3:
+         name: 'variable.parameter.function.latex'
+       4:
+         name: 'punctuation.definition.arguments.end.latex'
+     end: '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
+     name: 'meta.embedded.block.source'
+     comment: 'default code listing for so that dollar sign does not mess up subsequent parsing'
+     contentName: 'markup.raw.verbatim.latex'
+  }
+  {
+    begin: '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})(\\[)(?:.*\\blanguage\\s*=\\s*Java\\b.*)(\\])'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.arguments.begin.latex'
+      3:
+        name: 'variable.parameter.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.end.latex'
+      5:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      6:
+        name: 'variable.parameter.function.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+    end: '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.java'
+    patterns: [
       {
-        'include': 'source.python'
+        include: 'source.java'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)(luacode(?:\\*?))(\\})(?:\\s*%.*\\n?)?'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'comment': 'it should treat difference between luacode* and luacode better'
-    'contentName': 'meta.function.embedded.latex'
-    'end': '((\\\\)end)(\\{)(luacode(?:\\*?))(\\})'
-    'name': 'meta.embedded.block.lua'
-    'patterns': [
+    begin: '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})(\\[)(?:.*\\blanguage\\s*=\\s*Python\\b.*)(\\])'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.arguments.begin.latex'
+      3:
+        name: 'variable.parameter.function.latex'
+      4:
+        name: 'punctuation.definition.arguments.end.latex'
+      5:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      6:
+        name: 'variable.parameter.function.latex'
+      7:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+    end: '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
+    name: 'meta.embedded.block.source'
+    contentName: 'source.embedded.python'
+    patterns: [
       {
-        'begin': '^(?!\\\\end\\{luacode(?:\\*?)\\})'
-        'end': '(?=\\\\end\\{luacode(?:\\*?)\\})'
-        'name': 'source.lua'
-        'patterns': [
+        include: 'source.python'
+      }
+    ]
+  }
+  {
+    begin: '(?:\\s*)((\\\\)begin)(\\{)(luacode(?:\\*?))(\\})(?:\\s*%.*\\n?)?'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    comment: 'it should treat difference between luacode* and luacode better'
+    contentName: 'meta.function.embedded.latex'
+    end: '((\\\\)end)(\\{)(luacode(?:\\*?))(\\})'
+    name: 'meta.embedded.block.lua'
+    patterns: [
+      {
+        begin: '^(?!\\\\end\\{luacode(?:\\*?)\\})'
+        end: '(?=\\\\end\\{luacode(?:\\*?)\\})'
+        name: 'source.lua'
+        patterns: [
           {
-            'include': 'source.lua'
+            include: 'source.lua'
           }
         ]
       }
     ]
   }
   {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)((?:V|v)erbatim|alltt)(\\})'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'contentName': 'markup.raw.verbatim.latex'
-    'end': '((\\\\)end)(\\{)(\\4)(\\})'
-    'name': 'meta.function.verbatim.latex'
+    begin: '(?:\\s*)((\\\\)begin)(\\{)((?:V|v)erbatim|alltt)(\\})'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    contentName: 'markup.raw.verbatim.latex'
+    end: '((\\\\)end)(\\{)(\\4)(\\})'
+    name: 'meta.function.verbatim.latex'
   }
   {
-    'captures':
-      '1':
-        'name': 'support.function.url.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'markup.underline.link.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'match': '(?:\\s*)((\\\\)(?:url|href))(\\{)([^}]*)(\\})'
-    'name': 'meta.function.link.url.latex'
+    captures:
+      1:
+        name: 'support.function.url.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'markup.underline.link.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    match: '(?:\\s*)((\\\\)(?:url|href))(\\{)([^}]*)(\\})'
+    name: 'meta.function.link.url.latex'
   }
   {
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'comment': 'These two patterns match the \\begin{document} and \\end{document} commands, so that the environment matching pattern following them will ignore those commands.'
-    'match': '(?:\\s*)((\\\\)begin)(\\{)(document)(\\})'
-    'name': 'meta.function.begin-document.latex'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    comment: 'These two patterns match the \\begin{document} and \\end{document} commands, so that the environment matching pattern following them will ignore those commands.'
+    match: '(?:\\s*)((\\\\)begin)(\\{)(document)(\\})'
+    name: 'meta.function.begin-document.latex'
   }
   {
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'match': '(?:\\s*)((\\\\)end)(\\{)(document)(\\})'
-    'name': 'meta.function.end-document.latex'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    match: '(?:\\s*)((\\\\)end)(\\{)(document)(\\})'
+    name: 'meta.function.end-document.latex'
   }
   {
-    'begin': '''(?x)
+    begin: '''(?x)
     (?:\\s*)
     ((\\\\)begin)
     (\\{)
@@ -1416,19 +1416,19 @@
     (\\})
     (\\s*)?
     '''
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'contentName': 'string.other.math.block.environment.latex'
-    'end': '''(?x)
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    contentName: 'string.other.math.block.environment.latex'
+    end: '''(?x)
               (?:\\s*)
               ((\\\\)end)
               (\\{)
@@ -1436,93 +1436,93 @@
               (\\})
               (?:\\s*)?
            '''
-    'name': 'meta.function.environment.math.latex'
-    'patterns': [
+    name: 'meta.function.environment.math.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)((?:alignat)(?:\\*)?)(\\})(\\{)(\\d+)(\\})'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '7':
-        'name': 'variable.parameter.function.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'contentName': 'string.other.math.block.environment.latex'
-    'end': '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
-    'name': 'meta.function.environment.math.latex'
-    'patterns': [
+    begin: '(?:\\s*)((\\\\)begin)(\\{)((?:alignat)(?:\\*)?)(\\})(\\{)(\\d+)(\\})'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+      6:
+        name: 'punctuation.definition.arguments.begin.latex'
+      7:
+        name: 'variable.parameter.function.latex'
+      8:
+        name: 'punctuation.definition.arguments.end.latex'
+    contentName: 'string.other.math.block.environment.latex'
+    end: '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
+    name: 'meta.function.environment.math.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)((?:aligned|gathered)(?:\\*)?)(\\})(\\[)([tcb])(?=\\])'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '7':
-        'name': 'variable.parameter.latex'
-      '8':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-    'contentName': 'string.other.math.block.environment.latex'
-    'end': '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
-    'name': 'meta.function.environment.math.latex'
-    'patterns': [
+    begin: '(?:\\s*)((\\\\)begin)(\\{)((?:aligned|gathered)(?:\\*)?)(\\})(\\[)([tcb])(?=\\])'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+      6:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      7:
+        name: 'variable.parameter.latex'
+      8:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+    contentName: 'string.other.math.block.environment.latex'
+    end: '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
+    name: 'meta.function.environment.math.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)((?:eqnarray)(?:\\*)?)(\\})'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'invalid.deprecated.environment.eqnarray.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'contentName': 'string.other.math.block.environment.latex'
-    'end': '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
-    'name': 'meta.function.environment.math.latex'
-    'patterns': [
+    begin: '(?:\\s*)((\\\\)begin)(\\{)((?:eqnarray)(?:\\*)?)(\\})'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'invalid.deprecated.environment.eqnarray.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    contentName: 'string.other.math.block.environment.latex'
+    end: '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
+    name: 'meta.function.environment.math.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '''(?x)
+    begin: '''(?x)
                 (?:\\s*)
                 ((\\\\)begin)
                 (\\{)
@@ -1530,19 +1530,19 @@
                 (\\})
                 (\\s*)?
              '''
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'contentName': 'meta.data.environment.tabular.latex'
-    'end': '''(?x)
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    contentName: 'meta.data.environment.tabular.latex'
+    end: '''(?x)
               (?:\\s*)
               ((\\\\)end)
               (\\{)
@@ -1550,456 +1550,456 @@
               (\\})
               (?:\\s*)?
            '''
-    'name': 'meta.function.environment.tabular.latex'
-    'patterns': [
+    name: 'meta.function.environment.tabular.latex'
+    patterns: [
       {
-        'match': '\\\\\\\\'
-        'name': 'punctuation.definition.table.row2.latex'
+        match: '\\\\\\\\'
+        name: 'punctuation.definition.table.row2.latex'
       }
       {
-        'begin': '(?:^|(?<=\\\\\\\\))(?!\\\\\\\\|\\s*\\\\end\\{(?:tabular|array))'
-        'end': '(?=\\\\\\\\|\\s*\\\\end\\{(?:tabular|array))'
-        'name': 'meta.row2.environment.tabular.latex'
-        'patterns': [
+        begin: '(?:^|(?<=\\\\\\\\))(?!\\\\\\\\|\\s*\\\\end\\{(?:tabular|array))'
+        end: '(?=\\\\\\\\|\\s*\\\\end\\{(?:tabular|array))'
+        name: 'meta.row2.environment.tabular.latex'
+        patterns: [
           {
-            'match': '&'
-            'name': 'punctuation.definition.table.cell.latex'
+            match: '&'
+            name: 'punctuation.definition.table.cell.latex'
           }
           {
-            'begin': '(?:^|(?<=&))((?!&|\\\\\\\\|$))'
-            'end': '(?=&|\\\\\\\\|\\s*\\\\end\\{(?:tabular|array))'
-            'name': 'meta.cell.environment.tabular.latex'
-            'patterns': [
+            begin: '(?:^|(?<=&))((?!&|\\\\\\\\|$))'
+            end: '(?=&|\\\\\\\\|\\s*\\\\end\\{(?:tabular|array))'
+            name: 'meta.cell.environment.tabular.latex'
+            patterns: [
               {
-                'include': '$base'
+                include: '$base'
               }
             ]
           }
           {
-            'include': '$base'
+            include: '$base'
           }
         ]
       }
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)(itemize|enumerate|description|list)(\\})'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.latex'
-    'end': '((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?'
-    'name': 'meta.function.environment.list.latex'
-    'patterns': [
+    begin: '(?:\\s*)((\\\\)begin)(\\{)(itemize|enumerate|description|list)(\\})'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.latex'
+    end: '((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?'
+    name: 'meta.function.environment.list.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)(tikzpicture)(\\})'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.latex'
-    'end': '((\\\\)end)(\\{)(tikzpicture)(\\})(?:\\s*\\n)?'
-    'name': 'meta.function.environment.latex.tikz'
-    'patterns': [
+    begin: '(?:\\s*)((\\\\)begin)(\\{)(tikzpicture)(\\})'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.latex'
+    end: '((\\\\)end)(\\{)(tikzpicture)(\\})(?:\\s*\\n)?'
+    name: 'meta.function.environment.latex.tikz'
+    patterns: [
       {
-        'include': 'text.tex.latex.tikz'
+        include: 'text.tex.latex.tikz'
       }
       {
-        'include': 'text.tex.latex'
-      }
-    ]
-  }
-  {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)(\\w+[*]?)(\\})'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.latex'
-    'end': '((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?'
-    'name': 'meta.function.environment.general.latex'
-    'patterns': [
-      {
-        'include': '$base'
+        include: 'text.tex.latex'
       }
     ]
   }
   {
-    'captures':
-      '1':
-        'name': 'punctuation.definition.function.latex'
-    'match': '(\\\\)((re)?new|provide)command\\b'
-    'name': 'storage.type.function.latex'
-  }
-  {
-    'match': '\\\\Declare(?!OptionX?\\b)([A-Z][a-zA-Z]*)\\b'
-    'name': 'support.type.function.other.latex'
-  }
-  {
-    'match': '\\\\(Declare(Expandable)?|New|Renew|Provide)DocumentCommand\\b'
-    'name': 'support.type.function.xparse.latex'
-  }
-  {
-    'match': '(\\\\(bf|it|rm|sc|sf|sl|tt))\\b'
-    'name': 'invalid.deprecated.font.latex'
-  }
-  {
-    'begin': '((\\\\)marginpar)(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'support.function.marginpar.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.marginpar.begin.latex'
-    'contentName': 'meta.paragraph.margin.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.marginpar.end.latex'
-    'patterns': [
+    begin: '(?:\\s*)((\\\\)begin)(\\{)(\\w+[*]?)(\\})'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.latex'
+    end: '((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?'
+    name: 'meta.function.environment.general.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '((\\\\)footnote)((?:\\[[^\\[]*?\\])*)(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'support.function.footnote.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'patterns': [
+    captures:
+      1:
+        name: 'punctuation.definition.function.latex'
+    match: '(\\\\)((re)?new|provide)command\\b'
+    name: 'storage.type.function.latex'
+  }
+  {
+    match: '\\\\Declare(?!OptionX?\\b)([A-Z][a-zA-Z]*)\\b'
+    name: 'support.type.function.other.latex'
+  }
+  {
+    match: '\\\\(Declare(Expandable)?|New|Renew|Provide)DocumentCommand\\b'
+    name: 'support.type.function.xparse.latex'
+  }
+  {
+    match: '(\\\\(bf|it|rm|sc|sf|sl|tt))\\b'
+    name: 'invalid.deprecated.font.latex'
+  }
+  {
+    begin: '((\\\\)marginpar)(\\{)'
+    beginCaptures:
+      1:
+        name: 'support.function.marginpar.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.marginpar.begin.latex'
+    contentName: 'meta.paragraph.margin.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.marginpar.end.latex'
+    patterns: [
+      {
+        include: '$base'
+      }
+    ]
+  }
+  {
+    begin: '((\\\\)footnote)((?:\\[[^\\[]*?\\])*)(\\{)'
+    beginCaptures:
+      1:
+        name: 'support.function.footnote.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        patterns: [
           {
-            'captures':
-              '1':
-                'name': 'punctuation.definition.arguments.begin.latex'
-              '2':
-                'name': 'variable.parameter.latex'
-              '3':
-                'name': 'punctuation.definition.arguments.end.latex'
-            'match': '(\\[)([^\\[]*?)(\\])'
+            captures:
+              1:
+                name: 'punctuation.definition.arguments.begin.latex'
+              2:
+                name: 'variable.parameter.latex'
+              3:
+                name: 'punctuation.definition.arguments.end.latex'
+            match: '(\\[)([^\\[]*?)(\\])'
           }
         ]
-      '4':
-        'name': 'punctuation.definition.footnote.begin.latex'
-    'contentName': 'meta.footnote.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.footnote.end.latex'
-    'patterns': [
+      4:
+        name: 'punctuation.definition.footnote.begin.latex'
+    contentName: 'meta.footnote.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.footnote.end.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '((\\\\)emph)(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'support.function.emph.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.emph.begin.latex'
-    'contentName': 'markup.italic.emph.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.emph.end.latex'
-    'name': 'meta.function.emph.latex'
-    'patterns': [
+    begin: '((\\\\)emph)(\\{)'
+    beginCaptures:
+      1:
+        name: 'support.function.emph.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.emph.begin.latex'
+    contentName: 'markup.italic.emph.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.emph.end.latex'
+    name: 'meta.function.emph.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '((\\\\)textit)(\\{)'
-    'captures':
-      '1':
-        'name': 'support.function.textit.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.textit.begin.latex'
-    'comment': 'We put the keyword in a capture and name this capture, so that disabling spell checking for “keyword” won\'t be inherited by the argument to \\textit{...}.\n\nPut specific matches for particular LaTeX keyword.functions before the last two more general functions'
-    'contentName': 'markup.italic.textit.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.textit.end.latex'
-    'name': 'meta.function.textit.latex'
-    'patterns': [
+    begin: '((\\\\)textit)(\\{)'
+    captures:
+      1:
+        name: 'support.function.textit.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.textit.begin.latex'
+    comment: 'We put the keyword in a capture and name this capture, so that disabling spell checking for “keyword” won\'t be inherited by the argument to \\textit{...}.\n\nPut specific matches for particular LaTeX keyword.functions before the last two more general functions'
+    contentName: 'markup.italic.textit.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.textit.end.latex'
+    name: 'meta.function.textit.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '((\\\\)textbf)(\\{)'
-    'captures':
-      '1':
-        'name': 'support.function.textbf.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.textbf.begin.latex'
-    'contentName': 'markup.bold.textbf.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.textbf.end.latex'
-    'name': 'meta.function.textbf.latex'
-    'patterns': [
+    begin: '((\\\\)textbf)(\\{)'
+    captures:
+      1:
+        name: 'support.function.textbf.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.textbf.begin.latex'
+    contentName: 'markup.bold.textbf.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.textbf.end.latex'
+    name: 'meta.function.textbf.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '((\\\\)texttt)(\\{)'
-    'captures':
-      '1':
-        'name': 'support.function.texttt.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.texttt.begin.latex'
-    'contentName': 'markup.raw.texttt.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.texttt.end.latex'
-    'name': 'meta.function.texttt.latex'
-    'patterns': [
+    begin: '((\\\\)texttt)(\\{)'
+    captures:
+      1:
+        name: 'support.function.texttt.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.texttt.begin.latex'
+    contentName: 'markup.raw.texttt.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.texttt.end.latex'
+    name: 'meta.function.texttt.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'captures':
-      '0':
-        'name': 'keyword.other.item.latex'
-      '1':
-        'name': 'punctuation.definition.keyword.latex'
-    'match': '(\\\\)item\\b'
-    'name': 'meta.scope.item.latex'
+    captures:
+      0:
+        name: 'keyword.other.item.latex'
+      1:
+        name: 'punctuation.definition.keyword.latex'
+    match: '(\\\\)item\\b'
+    name: 'meta.scope.item.latex'
   }
   {
-    'begin': '''(?x)
+    begin: '''(?x)
                 ((\\\\)(?:text)?(?:paren)?(?:auto)?(?:foot)?(?:full)?(?:no)?(?:short)?[cC]ites?(?:al)?(?:t|p|author|year(?:par)?|title)?[ANP]*\\*?)
                 (?:(\\[)[^\\]]*(\\]))?
                 (?:(\\[)[^\\]]*(\\]))?
                 (\\{)
              '''
-    'captures':
-      '1':
-        'name': 'keyword.control.cite.latex'
-      '2':
-        'name': 'punctuation.definition.keyword.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '6':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '7':
-        'name': 'punctuation.definition.arguments.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.arguments.latex'
-    'name': 'meta.citation.latex'
-    'patterns': [
+    captures:
+      1:
+        name: 'keyword.control.cite.latex'
+      2:
+        name: 'punctuation.definition.keyword.latex'
+      3:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      4:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      5:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      6:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      7:
+        name: 'punctuation.definition.arguments.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.arguments.latex'
+    name: 'meta.citation.latex'
+    patterns: [
       {
-        'match': '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
-        'name': 'constant.other.reference.citation.latex'
+        match: '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
+        name: 'constant.other.reference.citation.latex'
       }
     ]
   }
   {
-    'begin': '(\\\\bibitem)(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.bibitem.latex'
-      '2':
-        'name': 'punctuation.definition.arguments.begin.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'patterns': [
+    begin: '(\\\\bibitem)(\\{)'
+    beginCaptures:
+      1:
+        name: 'keyword.control.bibitem.latex'
+      2:
+        name: 'punctuation.definition.arguments.begin.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.arguments.end.latex'
+    patterns: [
       {
-        'match': '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
-        'name': 'constant.other.reference.bibitem.latex'
+        match: '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
+        name: 'constant.other.reference.bibitem.latex'
       }
     ]
   }
   {
-    'begin': '((\\\\)(?:\\w*[rR]ef\\*?))(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.ref.latex'
-      '2':
-        'name': 'punctuation.definition.keyword.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.arguments.begin.latex'
-    'name': 'meta.reference.latex'
-    'patterns': [
+    begin: '((\\\\)(?:\\w*[rR]ef\\*?))(\\{)'
+    beginCaptures:
+      1:
+        name: 'keyword.control.ref.latex'
+      2:
+        name: 'punctuation.definition.keyword.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.arguments.begin.latex'
+    name: 'meta.reference.latex'
+    patterns: [
       {
-        'match': '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
-        'name': 'constant.other.reference.latex'
+        match: '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
+        name: 'constant.other.reference.latex'
       }
     ]
   }
   {
-    'begin': '((\\\\)label)(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.label.latex'
-      '2':
-        'name': 'punctuation.definition.keyword.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'name': 'meta.definition.latex'
-    'patterns': [
+    begin: '((\\\\)label)(\\{)'
+    beginCaptures:
+      1:
+        name: 'keyword.control.label.latex'
+      2:
+        name: 'punctuation.definition.keyword.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.arguments.end.latex'
+    name: 'meta.definition.latex'
+    patterns: [
       {
-        'match': '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
-        'name': 'constant.other.reference.latex'
+        match: '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
+        name: 'constant.other.reference.latex'
       }
     ]
   }
   {
-    'begin': '((\\\\)verb[\\*]?)\\s*((\\\\)scantokens)(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'support.function.verb.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'support.function.verb.latex'
-      '4':
-        'name': 'punctuation.definition.verb.latex'
-      '5':
-        'name': 'punctuation.definition.begin.latex'
-    'contentName': 'markup.raw.verb.latex'
-    'end': '(\\})'
-    'endCaptures':
-      '1':
-        'name': 'punctuation.definition.end.latex'
-    'name': 'meta.function.verb.latex'
-    'patterns': [
+    begin: '((\\\\)verb[\\*]?)\\s*((\\\\)scantokens)(\\{)'
+    beginCaptures:
+      1:
+        name: 'support.function.verb.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'support.function.verb.latex'
+      4:
+        name: 'punctuation.definition.verb.latex'
+      5:
+        name: 'punctuation.definition.begin.latex'
+    contentName: 'markup.raw.verb.latex'
+    end: '(\\})'
+    endCaptures:
+      1:
+        name: 'punctuation.definition.end.latex'
+    name: 'meta.function.verb.latex'
+    patterns: [
       {
-        'include': '$self'
+        include: '$self'
       }
     ]
   }
   {
-    'captures':
-      '1':
-        'name': 'support.function.verb.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.verb.latex'
-      '4':
-        'name': 'markup.raw.verb.latex'
-      '5':
-        'name': 'punctuation.definition.verb.latex'
-    'match': '((\\\\)verb[\\*]?)\\s*((?<=\\s)\\S|[^a-zA-Z])(.*?)(\\3|$)'
-    'name': 'meta.function.verb.latex'
+    captures:
+      1:
+        name: 'support.function.verb.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.verb.latex'
+      4:
+        name: 'markup.raw.verb.latex'
+      5:
+        name: 'punctuation.definition.verb.latex'
+    match: '((\\\\)verb[\\*]?)\\s*((?<=\\s)\\S|[^a-zA-Z])(.*?)(\\3|$)'
+    name: 'meta.function.verb.latex'
   }
   {
-    'begin': '\\\\\\('
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.latex'
-    'end': '\\\\\\)'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.latex'
-    'name': 'string.other.math.latex'
-    'patterns': [
+    begin: '\\\\\\('
+    beginCaptures:
+      0:
+        name: 'punctuation.definition.string.begin.latex'
+    end: '\\\\\\)'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.string.end.latex'
+    name: 'string.other.math.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'begin': '\\\\\\['
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.latex'
-    'end': '\\\\\\]'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.latex'
-    'name': 'string.other.math.latex'
-    'patterns': [
+    begin: '\\\\\\['
+    beginCaptures:
+      0:
+        name: 'punctuation.definition.string.begin.latex'
+    end: '\\\\\\]'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.string.end.latex'
+    name: 'string.other.math.latex'
+    patterns: [
       {
-        'include': '$base'
+        include: '$base'
       }
     ]
   }
   {
-    'captures':
-      '1':
-        'name': 'punctuation.definition.constant.latex'
-    'match': '(\\\\)(text(s(terling|ixoldstyle|urd|e(ction|venoldstyle|rvicemark))|yen|n(ineoldstyle|umero|aira)|c(ircledP|o(py(left|right)|lonmonetary)|urrency|e(nt(oldstyle)?|lsius))|t(hree(superior|oldstyle|quarters(emdash)?)|i(ldelow|mes)|w(o(superior|oldstyle)|elveudash)|rademark)|interrobang(down)?|zerooldstyle|o(hm|ne(superior|half|oldstyle|quarter)|penbullet|rd(feminine|masculine))|d(i(scount|ed|v(orced)?)|o(ng|wnarrow|llar(oldstyle)?)|egree|agger(dbl)?|blhyphen(char)?)|uparrow|p(ilcrow|e(so|r(t(housand|enthousand)|iodcentered))|aragraph|m)|e(stimated|ightoldstyle|uro)|quotes(traight(dblbase|base)|ingle)|f(iveoldstyle|ouroldstyle|lorin|ractionsolidus)|won|l(not|ira|e(ftarrow|af)|quill|angle|brackdbl)|a(s(cii(caron|dieresis|acute|grave|macron|breve)|teriskcentered)|cutedbl)|r(ightarrow|e(cipe|ferencemark|gistered)|quill|angle|brackdbl)|g(uarani|ravedbl)|m(ho|inus|u(sicalnote)?|arried)|b(igcircle|orn|ullet|lank|a(ht|rdbl)|rokenbar)))\\b'
-    'name': 'constant.character.latex'
+    captures:
+      1:
+        name: 'punctuation.definition.constant.latex'
+    match: '(\\\\)(text(s(terling|ixoldstyle|urd|e(ction|venoldstyle|rvicemark))|yen|n(ineoldstyle|umero|aira)|c(ircledP|o(py(left|right)|lonmonetary)|urrency|e(nt(oldstyle)?|lsius))|t(hree(superior|oldstyle|quarters(emdash)?)|i(ldelow|mes)|w(o(superior|oldstyle)|elveudash)|rademark)|interrobang(down)?|zerooldstyle|o(hm|ne(superior|half|oldstyle|quarter)|penbullet|rd(feminine|masculine))|d(i(scount|ed|v(orced)?)|o(ng|wnarrow|llar(oldstyle)?)|egree|agger(dbl)?|blhyphen(char)?)|uparrow|p(ilcrow|e(so|r(t(housand|enthousand)|iodcentered))|aragraph|m)|e(stimated|ightoldstyle|uro)|quotes(traight(dblbase|base)|ingle)|f(iveoldstyle|ouroldstyle|lorin|ractionsolidus)|won|l(not|ira|e(ftarrow|af)|quill|angle|brackdbl)|a(s(cii(caron|dieresis|acute|grave|macron|breve)|teriskcentered)|cutedbl)|r(ightarrow|e(cipe|ferencemark|gistered)|quill|angle|brackdbl)|g(uarani|ravedbl)|m(ho|inus|u(sicalnote)?|arried)|b(igcircle|orn|ullet|lank|a(ht|rdbl)|rokenbar)))\\b'
+    name: 'constant.character.latex'
   }
   {
-    'captures':
-      '1':
-        'name': 'punctuation.definition.column-specials.begin.latex'
-      '2':
-        'name': 'punctuation.definition.column-specials.end.latex'
-    'match': '(?:<|>)(\\{)\\$(\\})'
-    'name': 'meta.column-specials.latex'
+    captures:
+      1:
+        name: 'punctuation.definition.column-specials.begin.latex'
+      2:
+        name: 'punctuation.definition.column-specials.end.latex'
+    match: '(?:<|>)(\\{)\\$(\\})'
+    name: 'meta.column-specials.latex'
   }
   {
-    'include': 'text.tex'
+    include: 'text.tex'
   }
 ]

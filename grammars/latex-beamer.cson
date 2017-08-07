@@ -1,65 +1,65 @@
-'scopeName': 'text.tex.latex.beamer'
-'name': 'LaTeX Beamer'
-'fileTypes': []
-'firstLineMatch': '^\\\\documentclass(\\[.*\\])?\\{beamer\\}'
-'patterns': [
+scopeName: 'text.tex.latex.beamer'
+name: 'LaTeX Beamer'
+fileTypes: []
+firstLineMatch: '^\\\\documentclass(\\[.*\\])?\\{beamer\\}'
+patterns: [
   {
-    'begin': '(\\\\use(?:color|font|inner|outer)?theme)(?:(\\[)([^\\]]*)(\\]))?(\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.preamble.latex'
-      '2':
-        'name': 'punctuation.definition.arguments.optional.begin.latex'
-      '3':
-        'name': 'variable.parameter.latex'
-      '4':
-        'name': 'punctuation.definition.arguments.optional.end.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.begin.latex'
-    'contentName': 'support.class.latex'
-    'end': '\\}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'name': 'meta.preamble.latex'
+    begin: '(\\\\use(?:color|font|inner|outer)?theme)(?:(\\[)([^\\]]*)(\\]))?(\\{)'
+    beginCaptures:
+      1:
+        name: 'keyword.control.preamble.latex'
+      2:
+        name: 'punctuation.definition.arguments.optional.begin.latex'
+      3:
+        name: 'variable.parameter.latex'
+      4:
+        name: 'punctuation.definition.arguments.optional.end.latex'
+      5:
+        name: 'punctuation.definition.arguments.begin.latex'
+    contentName: 'support.class.latex'
+    end: '\\}'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.arguments.end.latex'
+    name: 'meta.preamble.latex'
   }
   {
-    'begin': '(?:\\s*)((\\\\)begin)(\\{)(frame)(\\})'
-    'captures':
-      '1':
-        'name': 'support.function.be.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'variable.parameter.function.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'end': '((\\\\)end)(\\{)(frame)(\\})'
-    'name': 'meta.function.environment.frame.latex'
-    'patterns': [
+    begin: '(?:\\s*)((\\\\)begin)(\\{)(frame)(\\})'
+    captures:
+      1:
+        name: 'support.function.be.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'variable.parameter.function.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    end: '((\\\\)end)(\\{)(frame)(\\})'
+    name: 'meta.function.environment.frame.latex'
+    patterns: [
       {
-        'include': '$self'
+        include: '$self'
       }
     ]
   }
   {
-    'captures':
-      '1':
-        'name': 'support.function.frametitle.latex'
-      '2':
-        'name': 'punctuation.definition.function.latex'
-      '3':
-        'name': 'punctuation.definition.arguments.begin.latex'
-      '4':
-        'name': 'entity.name.function.frame.latex'
-      '5':
-        'name': 'punctuation.definition.arguments.end.latex'
-    'match': '((\\\\)frametitle)(\\{)(.*)(\\})'
-    'name': 'meta.function.frametitle.latex'
+    captures:
+      1:
+        name: 'support.function.frametitle.latex'
+      2:
+        name: 'punctuation.definition.function.latex'
+      3:
+        name: 'punctuation.definition.arguments.begin.latex'
+      4:
+        name: 'entity.name.function.frame.latex'
+      5:
+        name: 'punctuation.definition.arguments.end.latex'
+    match: '((\\\\)frametitle)(\\{)(.*)(\\})'
+    name: 'meta.function.frametitle.latex'
   }
   {
-    'include': 'text.tex.latex'
+    include: 'text.tex.latex'
   }
 ]
