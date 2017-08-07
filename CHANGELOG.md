@@ -1,12 +1,19 @@
 
-## Master
+## 1.1.0
 
 #### Added
 - Grammar for gnuplot environments
+- Several file extensions are interpreted as LaTeX file ([#81](https://github.com/area/language-latex/pull/81), [#82](https://github.com/area/language-latex/pull/82), and
+[#126](https://github.com/area/language-latex/pull/126))
+- Support for highlighting long lines ([#131](https://github.com/area/language-latex/pull/131))
 
 #### Fixed
-Fix plural forms for cite commands (#14)
-Add correct highlighting for textcite and parencite commands (#53)
+- Fix plural forms for cite commands (#14)
+- Add correct highlighting for textcite and parencite commands (#53)
+- Highliting for `lstlisting` environment without explicit language specification ([#121](https://github.com/area/language-latex/pull/121))
+
+#### Removed
+- Highliting for quoation punctuations ([#96](https://github.com/area/language-latex/pull/96))
 
 ## 1.0.0
 
