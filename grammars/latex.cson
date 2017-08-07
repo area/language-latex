@@ -4,6 +4,7 @@
   'tex'
   'tikz'
 ]
+'limitLineLength': false
 'firstLineMatch': '^\\\\documentclass(?!.*\\{beamer\\})'
 'patterns': [
   {
