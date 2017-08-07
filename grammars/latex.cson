@@ -1247,6 +1247,22 @@
     'name': 'meta.embedded.block.source'
   }
   {
+     'begin': '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})([^\\[]|(\\[[^l].*\\])|\\[\\])'
+     'captures':
+       '1':
+         'name': 'support.function.be.latex'
+       '2':
+         'name': 'punctuation.definition.arguments.begin.latex'
+       '3':
+         'name': 'variable.parameter.function.latex'
+       '4':
+         'name': 'punctuation.definition.arguments.end.latex'
+     'end': '(?:\\s*)(\\\\end)(\\{)(lstlisting)(\\})'
+     'name': 'meta.embedded.block.source'
+     'comment': 'default code listing for so that dollar sign does not mess up subsequent parsing'
+     'contentName': 'markup.raw.verbatim.latex'
+  }
+  {
     'begin': '(?:\\s*)(\\\\begin)(\\{)(lstlisting)(\\})(\\[)(?:.*\\blanguage\\s*=\\s*Java\\b.*)(\\])'
     'captures':
       '1':
