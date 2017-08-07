@@ -30,7 +30,7 @@
     'prefix': 'subparagraph'
     'body': '\\\\subparagraph{${1:subparagraph name}}\n$0'
 
-# environement
+# environment
   '\\begin{}...\\end{}':
     'prefix': 'begin'
     'body': '\\\\begin{${1:env}}$2\n\t$0\n\\\\end{${1:env}}'
