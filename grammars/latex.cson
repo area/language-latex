@@ -145,6 +145,32 @@
     ]
   }
   {
+    'begin': '(?:\\s*)(\\\\begin)(\\{)(gnuplot)(\\})((\\[)(.*)(\\]))?'
+    'captures':
+      '1':
+        'name': 'support.function.be.latex'
+      '2':
+        'name': 'punctuation.definition.arguments.begin.latex'
+      '3':
+        'name': 'variable.parameter.function.latex'
+      '4':
+        'name': 'punctuation.definition.arguments.end.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.optional.begin.latex'
+      '6':
+        'name': 'variable.parameter.function.latex'
+      '7':
+        'name': 'punctuation.definition.arguments.optional.end.latex'
+    'end': '(?:\\s*)(\\\\end)(\\{)(gnuplot)(\\})'
+    'name': 'meta.embedded.block.source'
+    'contentName': 'source.embedded.gnuplot'
+    'patterns': [
+      {
+        'include': 'source.gnuplot'
+      }
+    ]
+  }
+  {
     'begin': '(?:\\s*)(((\\\\)begin)(\\{)(minted)(\\})(?:(\\[).*(\\]))?(\\{)(coffee(?:-?script)?)(\\})(\\s*%.*\\n?)?)'
     'captures':
       '1':

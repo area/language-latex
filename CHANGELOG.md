@@ -1,6 +1,9 @@
 
 ## Master
 
+#### Added
+- Grammar for gnuplot environments
+
 #### Fixed
 Fix plural forms for cite commands (#14)
 Add correct highlighting for textcite and parencite commands (#53)
