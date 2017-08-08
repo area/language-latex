@@ -39,25 +39,17 @@ patterns: [
     ]
   }
   {
-    begin: '((\\\\)(?:include|input))(\\{)'
-    beginCaptures:
+    match: '(\\\\(?:include|input))(\\{)(.*?)(\\})'
+    captures:
       1:
         name: 'keyword.control.include.latex'
       2:
-        name: 'punctuation.definition.function.latex'
-      3:
         name: 'punctuation.definition.arguments.begin.latex'
-    contentName: 'support.class.latex'
-    end: '\\}'
-    endCaptures:
-      0:
+      3:
+        name: 'constant.other.filename.latex'
+      4:
         name: 'punctuation.definition.arguments.end.latex'
     name: 'meta.include.latex'
-    patterns: [
-      {
-        include: '$self'
-      }
-    ]
   }
   {
     begin: '''(?x)
@@ -1852,64 +1844,43 @@ patterns: [
     ]
   }
   {
-    begin: '(\\\\bibitem)(\\{)'
-    beginCaptures:
+    match: '(\\\\bibitem)(\\{)(.*?)(\\})'
+    captures:
       1:
         name: 'keyword.control.bibitem.latex'
       2:
         name: 'punctuation.definition.arguments.begin.latex'
-    end: '\\}'
-    endCaptures:
-      0:
-        name: 'punctuation.definition.arguments.end.latex'
-    patterns: [
-      {
-        match: '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
-        name: 'constant.other.reference.bibitem.latex'
-      }
-    ]
-  }
-  {
-    begin: '((\\\\)(?:\\w*[rR]ef\\*?))(\\{)'
-    beginCaptures:
-      1:
-        name: 'keyword.control.ref.latex'
-      2:
-        name: 'punctuation.definition.keyword.latex'
       3:
-        name: 'punctuation.definition.arguments.begin.latex'
-    end: '\\}'
-    endCaptures:
-      0:
-        name: 'punctuation.definition.arguments.begin.latex'
-    name: 'meta.reference.latex'
-    patterns: [
-      {
-        match: '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
-        name: 'constant.other.reference.latex'
-      }
-    ]
+        name: 'constant.other.reference.bibitem.latex'
+      4:
+        name: 'punctuation.definition.arguments.end.latex'
+    name: 'meta.bibitem.latex'
   }
   {
-    begin: '((\\\\)label)(\\{)'
-    beginCaptures:
+    match: '(\\\\(?:\\w*[rR]ef.*?))(\\{)(.*?)(\\})'
+    captures:
+      1:
+        name: 'keyword.control.reference.latex'
+      2:
+        name: 'punctuation.definition.arguments.begin.latex'
+      3:
+        name: 'constant.other.reference.latex'
+      4:
+        name: 'punctuation.definition.arguments.end.latex'
+    name: 'meta.reference.latex'
+  }
+  {
+    match: '(\\\\label)(\\{)(.*?)(\\})'
+    captures:
       1:
         name: 'keyword.control.label.latex'
       2:
-        name: 'punctuation.definition.keyword.latex'
-      3:
         name: 'punctuation.definition.arguments.begin.latex'
-    end: '\\}'
-    endCaptures:
-      0:
-        name: 'punctuation.definition.arguments.end.latex'
-    name: 'meta.definition.latex'
-    patterns: [
-      {
-        match: '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
+      3:
         name: 'constant.other.reference.latex'
-      }
-    ]
+      4:
+        name: 'punctuation.definition.arguments.end.latex'
+    name: 'meta.label.latex'
   }
   {
     begin: '((\\\\)verb[\\*]?)\\s*((\\\\)scantokens)(\\{)'
