@@ -1,3 +1,9 @@
+# Changelog
+
+## 1.1.1
+
+#### Fixed
+- Highliting for `lstlisting` environment without explicit language specification ([#121](https://github.com/area/language-latex/pull/121))
 
 ## 1.1.0
 
