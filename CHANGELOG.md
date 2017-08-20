@@ -1,5 +1,8 @@
 # Changelog
 
+#### Added
+- Add spec for the latex grammar
+
 ## 1.1.1
 
 #### Fixed
