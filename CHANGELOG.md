@@ -2,6 +2,7 @@
 
 #### Added
 - Add spec for the latex grammar
+- Set 'softWrap' to be true by default in LaTeX files
 
 ## 1.1.1
 

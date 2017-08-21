@@ -21,6 +21,7 @@
       'proposition'
       'verbatim'
     ]
+    'softWrap': true
 '.text.log.latex':
   'editor':
     'foldEndPattern': '\\*\\*/|^\\s*\\)'
