@@ -6,6 +6,7 @@
 ]
 'limitLineLength': false
 'firstLineMatch': '^\\\\documentclass(?!.*\\{beamer\\})'
+'injectionSelector': 'source.embedded.latex'
 'patterns': [
   {
     'match': '(?=\\s)(?<=\\\\[\\w@]|\\\\[\\w@]{2}|\\\\[\\w@]{3}|\\\\[\\w@]{4}|\\\\[\\w@]{5}|\\\\[\\w@]{6})\\s'
