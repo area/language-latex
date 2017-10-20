@@ -1,13 +1,8 @@
 'scopeName': 'text.tex'
 'name': 'TeX'
 'fileTypes': [
-  'sty'
-  'cls'
   'dtx'
   'ins'
-  'bbx'
-  'cbx'
-  'lco'
 ]
 'patterns': [
   {

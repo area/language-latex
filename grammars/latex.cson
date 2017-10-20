@@ -1,6 +1,11 @@
 'scopeName': 'text.tex.latex'
 'name': 'LaTeX'
 'fileTypes': [
+  'bbx'
+  'cbx'
+  'cls'
+  'lco'
+  'sty'
   'tex'
   'tikz'
 ]
