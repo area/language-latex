@@ -1430,7 +1430,7 @@
         'name': 'variable.parameter.function.latex'
       '5':
         'name': 'punctuation.definition.arguments.end.latex'
-    'contentName': 'string.other.math.block.environment.latex'
+    'contentName': 'markup.other.math.block.environment.latex'
     'end': '''(?x)
               (?:\\s*)
               ((\\\\)end)
@@ -1465,7 +1465,7 @@
         'name': 'variable.parameter.function.latex'
       '8':
         'name': 'punctuation.definition.arguments.end.latex'
-    'contentName': 'string.other.math.block.environment.latex'
+    'contentName': 'markup.other.math.block.environment.latex'
     'end': '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
     'name': 'meta.function.environment.math.latex'
     'patterns': [
@@ -1493,7 +1493,7 @@
         'name': 'variable.parameter.latex'
       '8':
         'name': 'punctuation.definition.arguments.optional.end.latex'
-    'contentName': 'string.other.math.block.environment.latex'
+    'contentName': 'markup.other.math.block.environment.latex'
     'end': '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
     'name': 'meta.function.environment.math.latex'
     'patterns': [
@@ -1515,7 +1515,7 @@
         'name': 'invalid.deprecated.environment.eqnarray.latex'
       '5':
         'name': 'punctuation.definition.arguments.end.latex'
-    'contentName': 'string.other.math.block.environment.latex'
+    'contentName': 'markup.other.math.block.environment.latex'
     'end': '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
     'name': 'meta.function.environment.math.latex'
     'patterns': [
@@ -1958,12 +1958,12 @@
     'begin': '\\\\\\('
     'beginCaptures':
       '0':
-        'name': 'punctuation.definition.string.begin.latex'
+        'name': 'punctuation.definition.markup.begin.latex'
     'end': '\\\\\\)'
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.latex'
-    'name': 'string.other.math.latex'
+    'name': 'markup.other.math.inline.latex'
     'patterns': [
       {
         'include': '$base'
@@ -1974,12 +1974,12 @@
     'begin': '\\\\\\['
     'beginCaptures':
       '0':
-        'name': 'punctuation.definition.string.begin.latex'
+        'name': 'punctuation.definition.markup.begin.latex'
     'end': '\\\\\\]'
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.latex'
-    'name': 'string.other.math.latex'
+    'name': 'markup.other.math.display.latex'
     'patterns': [
       {
         'include': '$base'
