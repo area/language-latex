@@ -18,6 +18,7 @@ based on http://keepachangelog.com/en/1.0.0/
 
 ### Changed
 - Set 'softWrap' to be true by default in LaTeX files.
+- Changed inline math snippet from `$...$` to `\(...\)`.
 
 ## [1.1.1] - 2017-08-18
 ### Fixed
