@@ -1,13 +1,8 @@
 'scopeName': 'text.tex'
 'name': 'TeX'
 'fileTypes': [
-  'sty'
-  'cls'
   'dtx'
   'ins'
-  'bbx'
-  'cbx'
-  'lco'
 ]
 'patterns': [
   {
@@ -56,6 +51,14 @@
             'name': 'punctuation.definition.comment.tex'
         'end': '$\\n?'
         'name': 'comment.line.percentage.magic.tex'
+      }
+      {
+        'begin': '^(%\\s*!T[eE]X)\\s+([\\w\\s]+?)\\s*:\\s*(\\$?\\w+)\\s*='
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.definition.comment.tex'
+        'end': '$\\n?'
+        'name': 'comment.line.percentage.magic.dicy.tex'
       }
       {
         'begin': '%'

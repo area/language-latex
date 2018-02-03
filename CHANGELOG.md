@@ -12,6 +12,9 @@ based on http://keepachangelog.com/en/1.0.0/
 
 ### Added
 - Basic spec for the LaTeX grammar.
+- Grammar for `gls` and `glstext` like commands.
+- Templates for issues and pull requests.
+- Grammar for `comment` environment.
 
 ### Changed
 - Set 'softWrap' to be true by default in LaTeX files.

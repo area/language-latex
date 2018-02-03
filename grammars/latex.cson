@@ -1,11 +1,17 @@
 'scopeName': 'text.tex.latex'
 'name': 'LaTeX'
 'fileTypes': [
+  'bbx'
+  'cbx'
+  'cls'
+  'lco'
+  'sty'
   'tex'
   'tikz'
 ]
 'limitLineLength': false
 'firstLineMatch': '^\\\\documentclass(?!.*\\{beamer\\})'
+'injectionSelector': 'source.embedded.latex'
 'patterns': [
   {
     'match': '(?=\\s)(?<=\\\\[\\w@]|\\\\[\\w@]{2}|\\\\[\\w@]{3}|\\\\[\\w@]{4}|\\\\[\\w@]{5}|\\\\[\\w@]{6})\\s'
@@ -1634,6 +1640,23 @@
     ]
   }
   {
+    'begin': '(?:\\s*)((\\\\)begin)(\\{)(comment)(\\})'
+    'captures':
+      '1':
+        'name': 'support.function.be.latex'
+      '2':
+        'name': 'punctuation.definition.function.latex'
+      '3':
+        'name': 'punctuation.definition.arguments.latex'
+      '4':
+        'name': 'variable.parameter.function.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.latex'
+    'end': '((\\\\)end)(\\{)(\\4)(\\})(?:\\s*\\n)?'
+    'name': 'meta.function.environment.comment.latex'
+    'contentName': 'comment.block.latex'
+  }
+  {
     'begin': '(?:\\s*)((\\\\)begin)(\\{)(\\w+[*]?)(\\})'
     'captures':
       '1':
@@ -1911,6 +1934,35 @@
       {
         'match': '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
         'name': 'constant.other.reference.latex'
+      }
+    ]
+  }
+  {
+    'begin': '((\\\\)(?:gls|GLS|Gls)(?:disp|link|text|(?:first)?(?:pl(?:ural)?)?|name|symbol|desc|user(?:iv|v?i{0,3}))?)(?:(\\[)[^\\]]*(\\]))?(\\{)'
+    'beginCaptures':
+      '1':
+        'name': 'keyword.control.gls.latex'
+      '2':
+        'name': 'punctuation.definition.keyword.latex'
+      '3':
+        'name': 'punctuation.definition.arguments.optional.begin.latex'
+      '4':
+        'name': 'punctuation.definition.arguments.optional.end.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.begin.latex'
+    'end': '(\\})(?:(\\[)[^\\]]*(\\]))?'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.arguments.begin.latex'
+      '2':
+        'name': 'punctuation.definition.arguments.optional.begin.latex'
+      '3':
+        'name': 'punctuation.definition.arguments.optional.end.latex'
+    'name': 'meta.glossaries.latex'
+    'patterns': [
+      {
+        'match': '[!\u0028-\u007A\u00A1-\u017F\u3001-\u30FF\u0391-\u03CE\u0410-\u044F\u4E00-\u9FFF\uFF0C\uFF0E]'
+        'name': 'constant.other.glossaries.latex'
       }
     ]
   }
