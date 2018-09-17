@@ -23,6 +23,7 @@ based on http://keepachangelog.com/en/1.0.0/
 ## [1.1.1] - 2017-08-18
 ### Fixed
 - Highlighting for `lstlisting` environment without explicit language specification ([#121](https://github.com/area/language-latex/pull/121)).
+- Highlighting for `lstinline` command ([#192](https://github.com/area/language-latex/pull/192))
 
 ## [1.1.0] - 2017-08-07
 ### Added

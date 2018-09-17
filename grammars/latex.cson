@@ -2007,6 +2007,27 @@
     'name': 'meta.function.verb.latex'
   }
   {
+    'captures':
+      '1':
+        'name': 'support.function.embedded.latex'
+      '2':
+        'name': 'punctuation.definition.function.latex'
+      '3':
+        'name': 'variable.parameter.function.latex'
+      '4':
+        'name': 'punctuation.definition.arguments.optional.begin.latex'
+      '5':
+        'name': 'punctuation.definition.arguments.optional.end.latex'
+      '6':
+        'name': 'punctuation.definition.verbatim.latex'
+      '7':
+        'name': 'markup.raw.verbatim.latex'
+      '8':
+        'name': 'punctuation.definition.verbatim.latex'
+    'match': '((\\\\)lstinline(?![a-zA-Z])[\\*]?)\\s*((\\[)(?>\\{.*?\\}|[^\\]])*(\\]))?\\s*(\\S)(.*?)(\\6|$)'
+    'name': 'meta.function.listing.latex'
+  }
+  {
     'begin': '\\\\\\('
     'beginCaptures':
       '0':
