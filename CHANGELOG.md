@@ -11,20 +11,25 @@ based on http://keepachangelog.com/en/1.0.0/
 -->
 
 ### Added
-- Basic spec for the LaTeX grammar.
-- Grammar for `gls` and `glstext` like commands.
-- Templates for issues and pull requests.
-- Grammar for `comment` environment.
-- Support for more citation commands
+- Basic spec for the LaTeX grammar ([#142](https://github.com/area/language-latex/pull/142)).
+- Grammar for `gls` and `glstext` like commands ([#160](https://github.com/area/language-latex/pull/160)).
+- Templates for issues and pull requests ([#156](https://github.com/area/language-latex/pull/156)).
+- Grammar for `comment` environment ([#166](https://github.com/area/language-latex/pull/166)).
+- Support for more citation commands ([#183](https://github.com/area/language-latex/pull/183)).
+- Support for `lstinline` command ([#192](https://github.com/area/language-latex/pull/192)).
+- Injection selector for use in embedding LaTeX in other grammars ([#147](https://github.com/area/language-latex/pull/147)).
 
 ### Changed
-- Set 'softWrap' to be true by default in LaTeX files.
-- Changed inline math snippet from `$...$` to `\(...\)`.
+- Set 'softWrap' to be true by default in LaTeX files ([#143](https://github.com/area/language-latex/pull/143)).
+- Changed inline math snippet from `$...$` to `\(...\)` ([#167](https://github.com/area/language-latex/pull/167)).
+- Extended magic comment syntax ([#146](https://github.com/area/language-latex/pull/146)).
+
+### Fixed
+- LaTeX only extentions are no longer in the TeX grammar file types ([#148](https://github.com/area/language-latex/pull/148)).
 
 ## [1.1.1] - 2017-08-18
 ### Fixed
 - Highlighting for `lstlisting` environment without explicit language specification ([#121](https://github.com/area/language-latex/pull/121)).
-- Highlighting for `lstinline` command ([#192](https://github.com/area/language-latex/pull/192))
 
 ## [1.1.0] - 2017-08-07
 ### Added
