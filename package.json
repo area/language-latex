@@ -1,6 +1,6 @@
 {
   "name": "language-latex",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "private": true,
   "description": "Syntax highlighting for LaTeX for Atom",
   "repository": "https://github.com/area/language-latex",
