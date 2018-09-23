@@ -15,6 +15,7 @@ based on http://keepachangelog.com/en/1.0.0/
 - Grammar for `gls` and `glstext` like commands.
 - Templates for issues and pull requests.
 - Grammar for `comment` environment.
+- Support for more citation commands
 
 ### Changed
 - Set 'softWrap' to be true by default in LaTeX files.
