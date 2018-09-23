@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 For contributors: please write down the summary of your change in this Unreleased section
 based on http://keepachangelog.com/en/1.0.0/
 -->
+### Added
+- Source text for preview image ([#195](https://github.com/area/language-latex/pull/195)).
+- Support for `\regexp{...}` command ([#196](https://github.com/area/language-latex/pull/196)).
 
+
+## [1.2.0] - 2018-09-23
 ### Added
 - Basic spec for the LaTeX grammar ([#142](https://github.com/area/language-latex/pull/142)).
 - Grammar for `gls` and `glstext` like commands ([#160](https://github.com/area/language-latex/pull/160)).
@@ -24,6 +29,7 @@ based on http://keepachangelog.com/en/1.0.0/
 - Changed inline math snippet from `$...$` to `\(...\)` ([#167](https://github.com/area/language-latex/pull/167)).
 - Extended magic comment syntax ([#146](https://github.com/area/language-latex/pull/146)).
 - Many snippets can now start with an optional backslash ([#181](https://github.com/area/language-latex/pull/181)).
+- Updated preview image & removed (broken) activity graph from README ([#194](https://github.com/area/language-latex/pull/194))
 
 ### Fixed
 - LaTeX only extentions are no longer in the TeX grammar file types ([#148](https://github.com/area/language-latex/pull/148)).
@@ -145,7 +151,8 @@ __Disclaimer__: Version 0.5.0 is missing due to owner's mistake. See [`3d233d1`]
 ## 0.1.0 - 2014-02-27
 - Initial release.
 
-[Unreleased]: https://github.com/area/language-latex/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/area/language-latex/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/area/language-latex/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/area/language-latex/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/area/language-latex/compare/v0.1.0...v1.1.0
 [1.0.0]: https://github.com/area/language-latex/compare/v0.6.1...v1.0.0

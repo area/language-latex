@@ -2028,6 +2028,27 @@
     'name': 'meta.function.listing.latex'
   }
   {
+    'captures':
+      '1':
+        'name': 'support.function.regexp.latex'
+      '2':
+        'name': 'punctuation.definition.function.latex'
+      '3':
+        'name': 'punctuation.definition.regexp.begin.latex'
+      '4':
+        'name': 'markup.other.regexp.latex'
+        'patterns': [
+          {
+            'match': '\\\\.'
+            'name': 'constant.character.escape.regexp.latex'
+          }
+        ]
+      '5':
+        'name': 'punctuation.definition.regexp.end.latex'
+    'match': '((\\\\)regexp)\\s*(\\{)((?:\\\\.|[^}])*)(\\}|$)'
+    'name': 'meta.function.regexp.latex'
+  }
+  {
     'begin': '\\\\\\('
     'beginCaptures':
       '0':
