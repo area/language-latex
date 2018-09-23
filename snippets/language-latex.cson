@@ -1,37 +1,73 @@
 '.text.tex.latex':
 # preamble and package/class file
+  "\\RequirePackage":
+    "prefix": "\\RequirePackage"
+    "body": "\\\\RequirePackage$2{${1:package name}}$0"
   "RequirePackage":
+    "prefix": "RequirePackage"
+    "body": "\\\\RequirePackage$2{${1:package name}}$0"
+  "RequirePackage (Pkg)":
     "prefix": "Pkg"
     "body": "\\\\RequirePackage$2{${1:package name}}$0"
-  "usepackage":
+  '\\usepackage':
+    'prefix': '\\usepackage'
+    "body": "\\\\usepackage$2{${1:package name}}$0"
+  'usepackage':
+    'prefix': 'usepackage'
+    "body": "\\\\usepackage$2{${1:package name}}$0"
+  "usepackage (pkg)":
     "prefix": "pkg"
     "body": "\\\\usepackage$2{${1:package name}}$0"
 
 # document level
+  '\\part':
+    'prefix': '\\part'
+    'body': '\\\\part{${1:part name}}\n$0'
   'part':
     'prefix': 'part'
     'body': '\\\\part{${1:part name}}\n$0'
+  '\\chapter':
+    'prefix': '\\chapter'
+    'body': '\\\\chapter{${1:chapter name}}\n$0'
   'chapter':
     'prefix': 'chapter'
     'body': '\\\\chapter{${1:chapter name}}\n$0'
+  '\\section':
+    'prefix': '\\section'
+    'body': '\\\\section{${1:section name}}\n$0'
   'section':
     'prefix': 'section'
     'body': '\\\\section{${1:section name}}\n$0'
+  '\\subsection':
+    'prefix': '\\subsection'
+    'body': '\\\\subsection{${1:subsection name}}\n$0'
   'subsection':
     'prefix': 'subsection'
     'body': '\\\\subsection{${1:subsection name}}\n$0'
+  '\\subsubsection':
+    'prefix': '\\subsubsection'
+    'body': '\\\\subsubsection{${1:subsubsection name}}\n$0'
   'subsubsection':
     'prefix': 'subsubsection'
     'body': '\\\\subsubsection{${1:subsubsection name}}\n$0'
+  '\\paragraph':
+    'prefix': '\\paragraph'
+    'body': '\\\\paragraph{${1:paragraph name}}\n$0'
   'paragraph':
     'prefix': 'paragraph'
     'body': '\\\\paragraph{${1:paragraph name}}\n$0'
+  '\\subparagraph':
+    'prefix': '\\subparagraph'
+    'body': '\\\\subparagraph{${1:subparagraph name}}\n$0'
   'subparagraph':
     'prefix': 'subparagraph'
     'body': '\\\\subparagraph{${1:subparagraph name}}\n$0'
 
 # environment
   '\\begin{}...\\end{}':
+    'prefix': '\\begin'
+    'body': '\\\\begin{${1:env}}$2\n\t$0\n\\\\end{${1:env}}'
+  'begin{}...end{}':
     'prefix': 'begin'
     'body': '\\\\begin{${1:env}}$2\n\t$0\n\\\\end{${1:env}}'
   'align(*)':
@@ -87,6 +123,9 @@
   'math calligraphy':
     'prefix': 'cal'
     'body': '\\\\mathcal{$1}$0'
+  '\\fraction':
+    'prefix': '\\frac'
+    'body': '\\\\frac{$1}{$2}$0'
   'fraction':
     'prefix': 'frac'
     'body': '\\\\frac{$1}{$2}$0'
@@ -112,6 +151,15 @@
 
 # other
 '.text.tex.latex .meta.function.environment.list':
-  '\\\\item[description]':
+  '\\item':
+    'prefix': '\\item'
+    'body': '\\\\item ${0:item}'
+  'item':
+    'prefix': 'item'
+    'body': '\\\\item ${0:item}'
+  '\\item[description]':
+    'prefix': '\\itd'
+    'body': '\\\\item[${1:description}] ${0:item}'
+  'item[description]':
     'prefix': 'itd'
     'body': '\\\\item[${1:description}] ${0:item}'
