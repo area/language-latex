@@ -1845,7 +1845,7 @@
   }
   {
     'begin': '''(?x)
-                ((\\\\)(?:text)?(?:paren)?(?:auto)?(?:foot)?(?:full)?(?:no)?(?:short)?[cC]ites?(?:al)?(?:t|p|author|year(?:par)?|title)?[ANP]*\\*?)
+                ((\\\\)(?:(?:[tT]ext|[pP]aren|[aA]uto|[sS]mart|super|foot)?(?:full|no|short|(?:[vV]|[pP]|[fF]t?|[sS]|[tT]|[aA])?[vV]ol|(?:[pP]|f)?[nN]ote|short)?[cC]ites?(?:al)?(?:t|p|num|author|name|list|field|url|date|year(?:par)?|title)?(?:texts?)?|(?:paren|bracket)texts?)[ANP]*\\*?)
                 (?:(\\[)[^\\]]*(\\]))?
                 (?:(\\[)[^\\]]*(\\]))?
                 (\\{)
