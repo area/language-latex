@@ -2,7 +2,7 @@
 
 Syntax highlighting and Snippets for LaTeX in atom. This package was derived from the [LaTeX TextMate bundle](https://github.com/textmate/latex.tmbundle).
 
-![sample of language-latex package](https://github.com/area/language-latex/blob/master/_img/preview.png?raw=true "sample of language-latex package")
+![sample of language-latex package](/_img/preview_compressed.jpg "sample of language-latex package")
 
 ------------------------
 
@@ -14,10 +14,6 @@ apm install language-latex
 ```
 
 If you prefer installation via GUI, you can go to `Atom` > `Settings` > `Install`, search for `language-latex` in Packages tab and install it.
-
-
-## Project's Activity
-[![Throughput Graph](https://graphs.waffle.io/area/language-latex/throughput.svg)](https://waffle.io/area/language-latex/metrics)
 
 ## Contributing
 Please update the [CHANGELOG.md](https://github.com/area/language-latex/blob/master/CHANGELOG.md) and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests) when contributing.
