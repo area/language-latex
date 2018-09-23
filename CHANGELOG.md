@@ -23,6 +23,7 @@ based on http://keepachangelog.com/en/1.0.0/
 - Set 'softWrap' to be true by default in LaTeX files ([#143](https://github.com/area/language-latex/pull/143)).
 - Changed inline math snippet from `$...$` to `\(...\)` ([#167](https://github.com/area/language-latex/pull/167)).
 - Extended magic comment syntax ([#146](https://github.com/area/language-latex/pull/146)).
+- Many snippets can now start with an optional backslash ([#181](https://github.com/area/language-latex/pull/181)).
 
 ### Fixed
 - LaTeX only extentions are no longer in the TeX grammar file types ([#148](https://github.com/area/language-latex/pull/148)).
