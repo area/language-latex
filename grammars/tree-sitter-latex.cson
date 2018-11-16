@@ -1,0 +1,99 @@
+name: 'LaTeX'
+scopeName: 'source.latex'
+type: 'tree-sitter'
+parser: 'tree-sitter-latex'
+
+fileTypes: [
+  'bbx'
+  'cbx'
+  'cls'
+  'lco'
+  'sty'
+  'tex'
+  'tikz'
+]
+
+folds: [
+  {
+    type: [
+      'text_env',
+      'math_env',
+      'inline_math_env',
+      'display_math_env',
+      'verbatim_env',
+      'text_group',
+      'text_group_at',
+      'opt_text_group',
+      'opt_text_group_at',
+      'math_text_group',
+      'math_text_group_at'
+    ],
+    start: { index: 0 },
+    end: { index: -1 }
+  }
+]
+
+comments:
+  start: '%'
+
+scopes:
+  'document': 'source.latex'
+
+  'comment': 'comment.line'
+  'magic_comment': 'comment.line.magic'
+
+  'escaped': 'constant.character.escape'
+  'number': 'constant.number'
+
+  'class_name > text': 'entity.name.class'
+  'env_name > text': 'entity.name.tag'
+  'package_name > text': 'entity.name.section'
+  'section_token': 'entity.name.function.section'
+  'token_at': 'entity.name.function'
+  'token': 'entity.name.function'
+
+  'begin_token': 'keyword.control.begin'
+  'catcode_token': 'keyword.control.catcode'
+  'documentclass_token': 'keyword.control.documentclass'
+  'end_token': 'keyword.control.end'
+  'include_token': 'keyword.control.include'
+  'makeatletter_token': 'keyword.control.makeatletter'
+  'makeatother_token': 'keyword.control.makeatother'
+
+  'math_shift': 'keyword.operator.math_shift'
+  'subscript': 'keyword.operator.subscript'
+  'superscript': 'keyword.operator.superscript'
+  'parameter_char': 'keyword.operator.parameter_char'
+
+  'emph_token': 'keyword.other.emph'
+  'footnote_token': 'keyword.other.footnote'
+  'textbf_token': 'keyword.other.textbf'
+  'textit_token': 'keyword.other.textit'
+  'texttt_token': 'keyword.other.texttt'
+
+  'emph > text_group > text': 'markup.italic.emph'
+  'emph_at > text_group_at > text': 'markup.italic.emph'
+  'textbf > text_group > text': 'markup.bold.textbf'
+  'textbf_at > text_group_at > text': 'markup.bold.textbf'
+  'textit > text_group > text': 'markup.italic.textit'
+  'textit_at > text_group_at > text': 'markup.italic.textit'
+  'texttt > text_group > text': 'markup.raw.texttt'
+  'texttt_at > text_group_at > text': 'markup.raw.texttt'
+  'verbatim_text': 'markup.raw.verbatim'
+
+  'opt_text_group_at': 'meta.group.brackets'
+  'opt_text_group': 'meta.group.brackets'
+  'text_group_at': 'meta.group.braces'
+  'text_group': 'meta.group.braces'
+
+  'active_char': 'punctuation.active_char'
+  'alignment_tab': 'punctuation.definition.separator.alignment_tab'
+  'begin_group': 'punctuation.group.begin'
+  'begin_opt': 'punctuation.opt.begin'
+  'end_group': 'punctuation.group.end'
+  'end_opt': 'punctuation.opt.end'
+
+  'footnote > text_group': 'variable.parameter.footnote'
+
+  'storage_token': 'storage.type.function'
+  'usepackage_token': 'storage.modifier.import'

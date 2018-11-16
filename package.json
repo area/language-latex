@@ -8,7 +8,9 @@
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tree-sitter-latex": "latest"
+  },
   "keywords": [
     "latex"
   ]
