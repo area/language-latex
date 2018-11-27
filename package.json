@@ -7,7 +7,7 @@
   "repository": "https://github.com/area/language-latex",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">1.32.0"
   },
   "dependencies": {
     "tree-sitter-latex": "latest",
