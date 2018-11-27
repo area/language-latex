@@ -1,0 +1,87 @@
+scopeName: 'text.tex.biber'
+
+fileTypes: ['bib']
+
+name: 'Biber'
+
+type: 'tree-sitter'
+
+parser: 'tree-sitter-biber'
+
+folds: [
+  {
+    type: ['entry', 'preamble_command', 'string_command', 'comment_command']
+    start: {index: 0}
+    end: {index: -1}
+  }
+  {
+    type: 'string'
+    start: {index: 0}
+    end: {index: -1}
+  }
+  {
+    type: 'junk'
+  }
+  {
+    type: 'comment' # Has no effect currently
+  }
+]
+
+comments:
+  start: '% '
+
+scopes:
+  'program': 'text.tex.biber'
+
+  'junk': 'comment.line.character.junk'
+  'comment': 'comment.line.percentage'
+
+  'comment_command': 'comment.block'
+
+  'preamble_command': 'meta.preamble'
+  'preamble_command > "@"': 'keyword.other.preamble, punctuation.definition.keyword.preamble'
+  'preamble_command > name': 'keyword.other.preamble'
+  'preamble_command > "{", preamble_command > "("': 'punctuation.section.preamble.begin'
+  'preamble_command > "}", preamble_command > ")"': 'punctuation.section.preamble.end'
+
+  'string_command': 'meta.string-constant'
+  'string_command > "@"': 'keyword.other.string-constant, punctuation.definition.keyword.string-constant'
+  'string_command > name': 'keyword.other.string-constant'
+  'string_command > "{", string_command > "("': 'punctuation.section.string-constant.begin'
+  'string_command > "}", string_command > ")"': 'punctuation.section.string-constant.end'
+  'string_command > identifier': 'variable.other.key'
+
+  'entry': 'meta.entry'
+  'entry > "@"': 'keyword.other.entry-type, punctuation.definition.keyword.entry'
+  'entry > name': 'keyword.other.entry-type'
+  'entry > "{", entry > "("': 'punctuation.section.entry.begin'
+  'entry > "}", entry > ")"': 'punctuation.section.entry.end'
+  'entry > key': 'entity.name.type.entry-key'
+  'entry > ","': 'punctuation.separator.field'
+
+  'field': 'meta.field'
+  'field > identifier': 'variable.other.key'
+  'field > "="': 'punctuation.separator.key-value'
+
+  'value > "#"': 'punctuation.concat'
+
+  'identifier': 'string.interpolated'
+  'string': [
+    {
+      match: '^"'
+      scopes: 'string.quoted.double'
+    }
+    {
+      match: '^{'
+      scopes: 'string.braced'
+    }
+  ]
+  'string > "{", string > "("': 'punctuation.definition.string.begin'
+  'string > "}", string > ")"': 'punctuation.definition.string.end'
+  'string > \'"\':nth-child(0)': 'punctuation.definition.string.begin'
+  'string > \'"\'': 'punctuation.definition.string.end'
+
+  '"{"': 'punctuation.definition.group.begin'
+  '"}"': 'punctuation.definition.group.end'
+
+  'integer': 'constant.numeric'

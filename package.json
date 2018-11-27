@@ -10,7 +10,8 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "tree-sitter-latex": "latest"
+    "tree-sitter-latex": "latest",
+    "tree-sitter-biber": "0.4.0"
   },
   "keywords": [
     "latex"
