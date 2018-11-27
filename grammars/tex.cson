@@ -94,12 +94,12 @@ patterns: [
     begin: '\\$\\$'
     beginCaptures:
       0:
-        name: 'punctuation.definition.string.begin.tex'
+        name: 'punctuation.definition.markup.begin.tex'
     end: '\\$\\$'
     endCaptures:
       0:
-        name: 'punctuation.definition.string.end.tex'
-    name: 'string.other.math.block.tex'
+        name: 'punctuation.definition.markup.end.tex'
+    name: 'markup.other.math.block.tex'
     patterns: [
       {
         include: '#math'
@@ -117,12 +117,12 @@ patterns: [
     begin: '\\$'
     beginCaptures:
       0:
-        name: 'punctuation.definition.string.begin.tex'
+        name: 'punctuation.definition.markup.begin.tex'
     end: '\\$'
     endCaptures:
       0:
-        name: 'punctuation.definition.string.end.tex'
-    name: 'string.other.math.tex'
+        name: 'punctuation.definition.markup.end.tex'
+    name: 'markup.other.math.tex'
     patterns: [
       {
         match: '\\\\\\$'

@@ -1436,7 +1436,7 @@ patterns: [
         name: 'variable.parameter.function.latex'
       5:
         name: 'punctuation.definition.arguments.end.latex'
-    contentName: 'string.other.math.block.environment.latex'
+    contentName: 'markup.other.math.block.environment.latex'
     end: '''(?x)
               (?:\\s*)
               ((\\\\)end)
@@ -1471,7 +1471,7 @@ patterns: [
         name: 'variable.parameter.function.latex'
       8:
         name: 'punctuation.definition.arguments.end.latex'
-    contentName: 'string.other.math.block.environment.latex'
+    contentName: 'markup.other.math.block.environment.latex'
     end: '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
     name: 'meta.function.environment.math.latex'
     patterns: [
@@ -1499,7 +1499,7 @@ patterns: [
         name: 'variable.parameter.latex'
       8:
         name: 'punctuation.definition.arguments.optional.end.latex'
-    contentName: 'string.other.math.block.environment.latex'
+    contentName: 'markup.other.math.block.environment.latex'
     end: '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
     name: 'meta.function.environment.math.latex'
     patterns: [
@@ -1521,7 +1521,7 @@ patterns: [
         name: 'invalid.deprecated.environment.eqnarray.latex'
       5:
         name: 'punctuation.definition.arguments.end.latex'
-    contentName: 'string.other.math.block.environment.latex'
+    contentName: 'markup.other.math.block.environment.latex'
     end: '(?:\\s*)((\\\\)end)(\\{)(\\4)(\\})'
     name: 'meta.function.environment.math.latex'
     patterns: [
@@ -2052,12 +2052,12 @@ patterns: [
     begin: '\\\\\\('
     beginCaptures:
       0:
-        name: 'punctuation.definition.string.begin.latex'
+        name: 'punctuation.definition.markup.begin.latex'
     end: '\\\\\\)'
     endCaptures:
       0:
-        name: 'punctuation.definition.string.end.latex'
-    name: 'string.other.math.latex'
+        name: 'punctuation.definition.markup.end.latex'
+    name: 'markup.other.math.latex'
     patterns: [
       {
         include: '$base'
@@ -2068,12 +2068,12 @@ patterns: [
     begin: '\\\\\\['
     beginCaptures:
       0:
-        name: 'punctuation.definition.string.begin.latex'
+        name: 'punctuation.definition.markup.begin.latex'
     end: '\\\\\\]'
     endCaptures:
       0:
-        name: 'punctuation.definition.string.end.latex'
-    name: 'string.other.math.latex'
+        name: 'punctuation.definition.markup.end.latex'
+    name: 'markup.other.math.latex'
     patterns: [
       {
         include: '$base'
