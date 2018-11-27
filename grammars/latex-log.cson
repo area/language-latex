@@ -1,82 +1,82 @@
-'scopeName': 'text.log.latex'
-'name': 'LaTeX Log'
-'firstLineMatch': 'This is (e-p|e-up|Lua|pdf|Xe)?TeXk?, Version '
-'patterns': [
+scopeName: 'text.log.latex'
+name: 'LaTeX Log'
+firstLineMatch: 'This is (e-p|e-up|Lua|pdf|Xe)?TeXk?, Version '
+patterns: [
   {
-    'match': '.*Warning:'
-    'name': 'invalid.deprecated'
+    match: '.*Warning:'
+    name: 'invalid.deprecated'
   }
   {
-    'match': '[^:]*:\\d*:.*'
-    'name': 'invalid.deprecated'
+    match: '[^:]*:\\d*:.*'
+    name: 'invalid.deprecated'
   }
   {
-    'match': '.*Error|^!.*'
-    'name': 'invalid.illegal'
+    match: '.*Error|^!.*'
+    name: 'invalid.illegal'
   }
   {
-    'match': '\\((.*\\.sty)'
-    'captures':
-      '1':
-        'name': 'entity.name.function'
+    match: '\\((.*\\.sty)'
+    captures:
+      1:
+        name: 'entity.name.function'
   }
   {
-    'match': '\\((.*\\.cls)'
-    'captures':
-      '1':
-        'name': 'entity.name.type.class'
+    match: '\\((.*\\.cls)'
+    captures:
+      1:
+        name: 'entity.name.type.class'
   }
   {
-    'match': '\\((.*\\.cfg)'
-    'captures':
-      '1':
-        'name': 'entity.name.tag.configuration'
+    match: '\\((.*\\.cfg)'
+    captures:
+      1:
+        name: 'entity.name.tag.configuration'
   }
   {
-    'match': '\\((.*\\.def)'
-    'captures':
-      '1':
-        'name': 'entity.name.tag.definition'
+    match: '\\((.*\\.def)'
+    captures:
+      1:
+        name: 'entity.name.tag.definition'
   }
   {
-    'match': '.*Info.*'
-    'name': 'comment.block.documentation'
+    match: '.*Info.*'
+    name: 'comment.block.documentation'
   }
   {
-    'match': '.*FiXme:'
-    'name': 'meta.log.latex.fixme'
+    match: '.*FiXme:'
+    name: 'meta.log.latex.fixme'
   }
   {
-    'begin': '(Overfull|Underfull)'
-    'captures':
-      '1':
-        'name': 'keyword.control.hyphenation.latex'
-    'end': '(\\[\\]\\n)'
-    'name': 'meta.log.latex.hyphenation'
-    'patterns': [
+    begin: '(Overfull|Underfull)'
+    captures:
+      1:
+        name: 'keyword.control.hyphenation.latex'
+    end: '(\\[\\]\\n)'
+    name: 'meta.log.latex.hyphenation'
+    patterns: [
       {
-        'match': '[0-9]+\\-\\-[0-9]+'
-        'name': 'variable.parameter.hyphenation.latex2'
+        match: '[0-9]+\\-\\-[0-9]+'
+        name: 'variable.parameter.hyphenation.latex2'
       }
     ]
   }
   {
-    'begin': '(<)'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.log.latex'
-    'end': '(>)'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.log.latex'
-    'name': 'string.unquoted.other.filename.log.latex'
-    'patterns': [
+    begin: '(<)'
+    beginCaptures:
+      0:
+        name: 'punctuation.definition.string.begin.log.latex'
+    end: '(>)'
+    endCaptures:
+      0:
+        name: 'punctuation.definition.string.end.log.latex'
+    name: 'string.unquoted.other.filename.log.latex'
+    patterns: [
       {
-        'captures':
-          '1':
-            'name': 'entity.name.function.filename.latex'
-        'match': '(.*/.*\\.pdf)'
-        'name': 'support.function.with-arg.latex'
+        captures:
+          1:
+            name: 'entity.name.function.filename.latex'
+        match: '(.*/.*\\.pdf)'
+        name: 'support.function.with-arg.latex'
       }
     ]
   }
