@@ -1,4 +1,4 @@
-scopeName: 'text.tex.latex'
+scopeName: 'source.latex'
 name: 'LaTeX'
 fileTypes: [
   'bbx'
