@@ -10,11 +10,11 @@ describe "latex grammar", ->
     runs ->
       grammar = atom.grammars.grammarForScopeName('text.tex.latex')
 
-  it "parses the grammar", ->
+  it 'parses the grammar', ->
     expect(grammar).toBeTruthy()
     expect(grammar.scopeName).toBe 'text.tex.latex'
 
-  it "parses a simple article", ->
+  it 'parses a simple article', ->
     s = "#{preamble} Hello, Latex! $2+3=5$ #{afterword}"
     tk = grammar.tokenizeLines(s)
     expect(tk[0][14].scopes[1]).toBe 'string.other.math.tex'

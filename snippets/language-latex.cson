@@ -1,23 +1,23 @@
 '.text.tex.latex':
 # preamble and package/class file
-  "\\RequirePackage":
-    "prefix": "\\RequirePackage"
-    "body": "\\\\RequirePackage$2{${1:package name}}$0"
-  "RequirePackage":
-    "prefix": "RequirePackage"
-    "body": "\\\\RequirePackage$2{${1:package name}}$0"
-  "RequirePackage (Pkg)":
-    "prefix": "Pkg"
-    "body": "\\\\RequirePackage$2{${1:package name}}$0"
+  '\\RequirePackage':
+    'prefix': '\\RequirePackage'
+    'body': '\\\\RequirePackage$2{${1:package name}}$0'
+  'RequirePackage':
+    'prefix': 'RequirePackage'
+    'body': '\\\\RequirePackage$2{${1:package name}}$0'
+  'RequirePackage (Pkg)':
+    'prefix': 'Pkg'
+    'body': '\\\\RequirePackage$2{${1:package name}}$0'
   '\\usepackage':
     'prefix': '\\usepackage'
-    "body": "\\\\usepackage$2{${1:package name}}$0"
+    'body': '\\\\usepackage$2{${1:package name}}$0'
   'usepackage':
     'prefix': 'usepackage'
-    "body": "\\\\usepackage$2{${1:package name}}$0"
-  "usepackage (pkg)":
-    "prefix": "pkg"
-    "body": "\\\\usepackage$2{${1:package name}}$0"
+    'body': '\\\\usepackage$2{${1:package name}}$0'
+  'usepackage (pkg)':
+    'prefix': 'pkg'
+    'body': '\\\\usepackage$2{${1:package name}}$0'
 
 # document level
   '\\part':
