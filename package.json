@@ -13,6 +13,9 @@
     "tree-sitter-latex": "latest",
     "tree-sitter-biber": "0.4.0"
   },
+  "devDependencies": {
+    "season": "^6.0.2"
+  },
   "keywords": [
     "latex"
   ]
